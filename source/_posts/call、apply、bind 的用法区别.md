@@ -1,5 +1,5 @@
 ---
-title: call，apply，bind的用法区别
+title: call、apply、bind 的用法区别
 date: 2018-01-03 22:02:33
 tags:
 ---
