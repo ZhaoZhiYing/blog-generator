@@ -114,7 +114,7 @@ input没有子元素，button有子元素
 	       通常位于 <head> 元素内部。
 
 ----
-参考：写代码啦 <https://xiedaimala.com/>
+参考：[写代码啦] (https://xiedaimala.com/)
 
 
 

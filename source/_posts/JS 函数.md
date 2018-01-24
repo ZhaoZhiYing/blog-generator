@@ -296,6 +296,6 @@ foo1(); //8
 -------
 参考：
 
-阮一峰的《JavaScript 标准参考教程》<http://javascript.ruanyifeng.com/grammar/function.html>
+[阮一峰的《JavaScript 标准参考教程》](http://javascript.ruanyifeng.com/grammar/function.html)
 
-写代码啦 <https://xiedaimala.com/>
+[写代码啦] (https://xiedaimala.com/)

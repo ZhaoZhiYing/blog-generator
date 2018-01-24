@@ -17,6 +17,10 @@ JavaScript 语言的每一个值，都属于某一种数据类型。JavaScript �
 ##### 一种复杂类型
 
 	object 对象
+	
+	下面两种也属于对象：
+	* 数组（array）
+	* 函数（function）
 
 -------
 
@@ -154,6 +158,6 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
 -------
 参考：
 
-阮一峰的《JavaScript 标准参考教程》<http://javascript.ruanyifeng.com/grammar/function.html>
+[阮一峰的《JavaScript 标准参考教程》](http://javascript.ruanyifeng.com/grammar/function.html)
 
-写代码啦 <https://xiedaimala.com/>
+[写代码啦] (https://xiedaimala.com/)
