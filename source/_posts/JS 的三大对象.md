@@ -12,7 +12,9 @@ tags:
 
 * 这些引用类型在运行过程中需要通过`new`来创建所需的实例对象。
 
-* 包含：`Object` `Function` `Array` `String` `Boolean` `Number` `Date` `RegExp`等
+* 包含：`Object` `Function` `Array`  `Date` `RegExp`
+
+	和三个基本包装类型 `String` `Boolean` `Number`
 
 ------
 
@@ -22,7 +24,7 @@ tags:
 
 * `ECMA-262`只定义了两个内置对象，即`Global`和`Math`。
 
-* **根据定义，内置对象是本地对象的一种**。
+* **根据定义，内置对象是本地对象的一种。**
 
 ------
 
