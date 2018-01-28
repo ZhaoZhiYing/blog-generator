@@ -32,7 +32,7 @@ tags:
 	  console.log(s); 
 	};	
 	
-##### 4.Function构造函数（一般不用）(window.Function函数对象)
+##### 4.`Function`构造函数（一般不用）
 	var add = new Function(
 	  'x',
 	  'y',
@@ -44,17 +44,20 @@ tags:
 	} 
 	
 ##### 5.箭头函数(匿名) (x , y) => { return x + y }
+* 引入箭头函数有两个方面的作用：更简短的函数并且不绑定this
 
-	(参数1, 参数2, …, 参数N) => {函数声明}
-	(参数1, 参数2, …, 参数N) => 表达式（单一）
-	//相当于：(参数1, 参数2, …, 参数N) =>{ return表达式}
+```
+(参数1, 参数2, …, 参数N) => {函数声明}
+(参数1, 参数2, …, 参数N) => 表达式（单一）
+//相当于：(参数1, 参数2, …, 参数N) =>{ return表达式}
 	
-	// 当只有一个参数时，圆括号是可选的：
-	(单一参数) => {函数声明}
-	单一参数 => {函数声明}
+// 当只有一个参数时，圆括号是可选的：
+(单一参数) => {函数声明}
+单一参数 => {函数声明}
 	
-	// 没有参数的函数应该写成一对圆括号。
-	() => {函数声明}
+// 没有参数的函数应该写成一对圆括号。
+() => {函数声明}
+```	
 
 ##### `function print(){}`和`var s = function print(){}`区别
 
@@ -65,7 +68,7 @@ tags:
 -------
 
 #### 函数的属性和方法
-##### name属性
+##### `name`属性
 `name`属性返回紧跟在`function`关键字之后的那个函数名。
 
 	function f1() {}; f1.name // 'f1'
@@ -74,7 +77,7 @@ tags:
 	f5 = new Function('x', 'y','return x + y’){};   
 	f5.name//‘anonymous’ (匿名) 
   
-##### length属性
+##### `length`属性
 `length`属性返回函数预先定义的参数个数。
 
 -------
@@ -93,7 +96,7 @@ tags:
        
 -------  
 #### 函数内部的变量提升
-var命令声明的变量，不管在什么位置，变量声明都会被提升到函数体的头部。
+`var`命令声明的变量，不管在什么位置，变量声明都会被提升到函数体的头部。
 
 	function foo(x) {
 	  if (x > 100) {
@@ -198,7 +201,7 @@ add.apply(add, [5, 3]); //8
 ```	
 	
 ##### `bind`
-bind 接受的参数跟 call 一致，只是 bind 不会立即调用，它会生成一个新的函数，你想什么时候调就什么时候调。如下代码：
+`bind` 接受的参数跟 `call` 一致，只是 `bind` 不会立即调用，它会生成一个新的函数，你想什么时候调就什么时候调。如下代码：
 
 ```	
 function add(a, b){
@@ -210,78 +213,6 @@ var foo1 = add.bind(add, 5,3);
 foo1(); //8
 ```	    
 -------
-#### `this`和`arguments`
-
-`this`是函数的第一个参数（且必须是对象）,`arguments`是函数的第二个参数（包装成一个数组[]）<br/>
-
-普通模式：如果`this`是`undefined`或`null`，浏览器会把`this`变成`window`<br/>
-
-严格模式：第一个参数是什么，浏览器会把`this`变成什么.<br/>
-	
-	  function f(){
-      console.log(this)
-      console.log(arguments)
-	  }
-	  f.call() // window
-	  f.call({name:'frank'}) // {name: 'frank'}, []
-	  f.call({name:'frank'},1) // {name: 'frank'}, [1]
-	  f.call({name:'frank'},1,2) // {name: 'frank'}, [1,2]
-  
- `this`为什么必须是对象，因为`this`就是函数与对象之间的羁绊。
-
-      var person = {
-          name: 'frank',
-          sayHi: function(person){
-              console.log('Hi, I am' + person.name)
-          },
-          sayBye: function(person){
-              console.log('Bye, I am' + person.name)
-          },
-          say: function(person, word){
-              console.log(word + ', I am' + person.name)
-          }
-      }
-      person.sayHi(person)
-      person.sayBye(person)
-      person.say(person, 'How are you')
-
-      // 能不能变成 
-      person.sayHi()
-      person.sayBye()
-      person.say('How are you')
-
-      // 那么源代码就要改了
-      var person = {
-          name: 'frank',
-          sayHi: function(){
-              console.log('Hi, I am' + this.name)
-          },
-          sayBye: function(){
-              console.log('Bye, I am' + this.name)
-          },
-          say: function(word){
-              console.log(word + ', I am' + this.name)
-          }
-      }
-      // 如果你不想吃语法糖
-      person.sayHi.call(person)
-      person.sayBye.call(person)
-      person.say.call(person, 'How are you')
-
-      // 还是回到那句话：this 是 call 的第一个参数
-      // this 是参数，所以，只有在调用的时候才能确定
-      person.sayHi.call({name:'haha'})  // 这时 sayHi 里面的 this 就不是 person 了
-      // this 真的很不靠谱
-
-      // 新手疑惑的两种写法
-      var fn = person.sayHi
-      person.sayHi() // this === person
-      fn()  // this === window
-	
-##### `this`的历史原因
-要长得像`Java`，让`Java`程序员来学`JS`，但是他们发现`this`多余，就有了 `use strict` 
-
--------	
 
 ##### `Call Stack`先入后出
 `call stack`调用堆栈，调用堆栈是一个方法列表，按调用顺序保存所有在运行期被调用的方法。
@@ -294,8 +225,5 @@ foo1(); //8
 当调用时，```a.call()```会被记在 call stack 里。接着 ```console.log(‘a’)``` 记在 call stack 里。```return a``` 到这一步时```console.log(‘a’)```会存在```a.call()```里，最后```a.call()```退出
 
 -------
-参考：
 
-[阮一峰的《JavaScript 标准参考教程》](http://javascript.ruanyifeng.com/grammar/function.html)
-
-[写代码啦] (https://xiedaimala.com/)
+参考：[写代码啦] (https://xiedaimala.com/)

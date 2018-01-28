@@ -3,7 +3,10 @@ title: JS 的数据类型
 date: 2017-12-28 11:53:47
 tags:
 ---
-JavaScript 语言的每一个值，都属于某一种数据类型。JavaScript 的数据类型，共有七种。
+`JavaScript`语言的每一个值，都属于某一种数据类型。`JavaScript`的数据类型，共有七种。
+
+---
+### 数据类型
 
 ##### 六种基本类型
 
@@ -24,7 +27,7 @@ JavaScript 语言的每一个值，都属于某一种数据类型。JavaScript �
 
 -------
 
-#### 1.number 数值
+#### 1.`number`(数值)
 
 	(1) 十进制: 整数小数(1, 1.1, .1)
                科学计数法：12e2 // 1200
@@ -34,7 +37,7 @@ JavaScript 语言的每一个值，都属于某一种数据类型。JavaScript �
 	(4) 十六进制：0x开头
 -------
 
-#### 2.string（字符串）
+#### 2.`string`(字符串）
  
 	(1) 用 ‘’或“”引起来
 	(2)转义符：\（同命令行回车：\ ）
@@ -42,33 +45,44 @@ JavaScript 语言的每一个值，都属于某一种数据类型。JavaScript �
 	(4)反引号：`（`写在开头结尾，适用于多行字符串，每行含有一个回车）
 -------
 
-#### 3.boolean（布尔值）
+#### 3.`boolean`(布尔值）
 
 	true（真）和false（假）两个特定值
 	
 -------
 
-#### 4.undefined
+#### 4.`undefined`
+在使用`var`声明变量但未对其初始化时，这个变量的值就是`undefined`
 
-	表示“未定义”或不存在
+	var message;
+	message === undefined; // true
+
+对为初始化和未声明的变量执行`typeof`操作符都返回`undefined`值
+	
+	var message; //message 声明后默认取得了 undefined 值
+	//var age  // age 未声明
+	
+	typeof message //undefined	
+	typeof age //undefined		
          
 -------
 
-#### 5.null
+#### 5.`null`
+`null`表示一个空对象指针
 
-	表示无值，即此处的值就是“无”的状态。
+	typrof null //"object"
+	
+如果定义的变量准备将来用来保存对象，那么最好将该变量初始化为`null`。
 
-##### `null`和`udefined`区别
+	var message = null	
+	
+`undefined`派生自`null`，`ECMA-262`规定它们的相等性测试(==)返回`true`
 
-	null：表示空值，即该处的值现在为空。调用函数时，某个参数未设置任何值，这时就可以传入null。
-	undefined：表示"缺少值"，就是此处应该有一个值，但是还没有定义。
-	1.语法：如果一个变量没有赋值，就是 undefined
-	2.惯例：如果有一个对象object，但是现在不想赋值，那就给一个 null（推荐）
-	       如果有一个非对象，不想赋值，推荐初始化成 undefined 
--------
+	undefined == null //true
 
-#### 6.symbol（符号）
-Symbol 可以创建一个独一无二的值（但并不是字符串）。
+
+#### 6.`symbol`(符号）
+`symbol`可以创建一个独一无二的值（但并不是字符串）。
 
 	var x = Symbol('a')
 	var y = Symbol('a')
@@ -76,9 +90,9 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
  
 -------
 
-#### 7.object（对象）
+#### 7.`object`(对象）
 
-对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合。
+对象就是一组“键值对”`key-value`的集合，是一种无序的复合数据集合。
 
 	var person = {
 		'name': 'zhaozhao', //键值是字符串
@@ -89,6 +103,7 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
 		'p': function (x) {return 2 * x;}//键值是函数，也叫做方法
  	} 
  	person['name']//zhaozhao
+ 	
    
 ##### 键名和键值
     
@@ -104,12 +119,12 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
 	* 数值只能用方括号运算符：obj[0xFF]
 	* 数字键可以不加引号，因为会被当作字符串处理：o[0.7]
              
-##### 检查变量是否声明（in运算符）
+##### 检查变量是否声明(`in`运算符）
 
 	var o = { p: 1 };
 	'p' in o // true (注意，检查的是键名，不是键值)
 	
-##### 查看所有属性（Object.keys）	
+##### 查看所有属性`Object.keys`
 
 	var o = {
 	  key1: 1,
@@ -119,9 +134,9 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
 	Object.keys(o);
 	// ['key1', 'key2']
 	
-##### delete命令
+##### `delete`命令
 
-	//无value无key
+	//无 value 无 key
 	var person = {
 		'name': 'zhaozhao'
  	} 
@@ -129,7 +144,7 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
  	person.name //undefined
  	'name' in person //false
  	
- 	//无value 有key
+ 	//无 value 有 key
  	var person = {
 		'name': 'zhaozhao'
  	} 
@@ -155,7 +170,32 @@ Symbol 可以创建一个独一无二的值（但并不是字符串）。
  	}
 	//name
 	//age
+
 -------
+### 检测数据类型
+##### 检测基本类型`typeof`
+* 要检测一个变量是字符串、数值、布尔值还是`undefined`，用`typeof`操作符。
+* `typeof`操作符返回一个字符串，指示未经计算的操作数的类型。
+* 语法：`typeof operand`，`operand`是一个表达式，表示对象或原始值，其类型将被返回。
+
+```
+var s = 'message'
+typeof s //"string"
+```
+
+##### 检测对象`instanceof`
+* 如果变量的值是一个对象或`null`，则用`instanceof`操作符
+* 语法：`object instanceof constructor`，返回一个布尔值。
+* `instanceof`运算符用来检测`constructor.prototype`是否存在于参数 `object`的原型链上。
+
+```
+var obj = {}
+obj instanceof Object //true
+obj instanceof Array //false
+```
+
+-------
+
 参考：
 
 [阮一峰的《JavaScript 标准参考教程》](http://javascript.ruanyifeng.com/grammar/function.html)
