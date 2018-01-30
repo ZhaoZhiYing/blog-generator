@@ -1,12 +1,11 @@
 ---
-layout: AJAX
-title: 是什么？
-date: 2018-01-28 23:32:06
+title: AJAX
+date: 2018-01-29 23:08:55
 tags:
 ---
 #### 历史背景
 ##### 如何发请求？
-* `form`可以发请求，但是会刷新页面或新开页面
+* `form`可以发`get` `post`请求，但是会刷新页面或新开页面
 * `a`标签可以发`get`请求，但是会刷新页面或新开页面
 * `img` 可以发`get`请求，但是只能以图片的形式展示
 * `link`可以发`get`请求，但是只能以 `CSS` `favicon` 的形式展示
@@ -30,9 +29,9 @@ tags:
 
 ---
 
-#### `XMLHTTPRequest`
+#### `XMLHttpRequest`
 
-如何使用原生`JS`来发送`AJAX`请求？（`XMLHTTPRequest`）
+如何使用原生`JS`来发送`AJAX`请求？（`XMLHttpRequest`）
 
 ```
 //main.js
@@ -51,7 +50,9 @@ myButton.addEventListener('click', (e)=>{
  request.open('GET', '/xxx') // 配置request
  request.send()
 })
-    
+```
+	
+```	    
 // 后端代码（XML）
 }else if(path === '/xxx'){
  response.statusCode = 200
@@ -66,7 +67,9 @@ myButton.addEventListener('click', (e)=>{
  `)
  response.end()
 }
-   
+```
+	
+```   
 // 后端代码（JSON）
 }else if(path === '/xxx'){
  response.statusCode = 200
@@ -83,8 +86,8 @@ myButton.addEventListener('click', (e)=>{
  `)
  response.end()
 }
-```    
-
+```
+	
 `readyState`的五种状态，重点记住`4`
 
 <img src='https://i.loli.net/2018/01/29/5a6eeb46a0ca4.png
@@ -98,7 +101,7 @@ myButton.addEventListener('click', (e)=>{
 ---
 
 #### `JSON`
-`JSON`是`JavaScript Object Notation`的简称，它是一种表示结构化数据的格式。相比`XML`，`JSON`是在`JavaScript`中读写结构化数据的更好的方式。因为可以把`JSON`
+`JSON`是`JavaScript Object Notation`的简称，它是一种表示结构化数据的格式。相比`XML`，`JSON`是在`JavaScript`中读写结构化数据的更好的方式。主要是因为`JSON`更加简洁。
 
 ##### `JSON` 与 `JavaScript` 的关系
 `JSON` 和`JavaScript`是两种不同的语法，`JSON`参考了`JavaScript`。
@@ -138,10 +141,10 @@ http://baidu.com:80 可以向 http://baidu.com:81 发 AJAX 请求吗 //no
 ```
 
 ##### `CORS`
+`CORS`是跨源资源分享（`Cross-Origin Resource Sharing`）的缩写，译为跨源资源共享。它是`W3C`标准，是跨源`AJAX`请求的根本解决方法。相比`JSONP`只能发`GET`请求，`CORS`允许任何类型的请求。
 
 * 只有 协议+端口+域名 一模一样才允许发 `AJAX` 请求
-* `CORS` 可以告诉浏览器，我俩一家的，别阻止他
-* `CORS`是`Cross-Origin Resource Sharing`的简称，译为跨源资源共享。
+* `CORS` 可以告诉浏览器，我俩一家的，别阻止他。
 
 ```
 // 后端代码（JSON）
@@ -165,4 +168,4 @@ http://baidu.com:80 可以向 http://baidu.com:81 发 AJAX 请求吗 //no
 
 ---
 
-参考：[写代码啦] (https://xiedaimala.com/)
+参考：[写代码啦](https://xiedaimala.com/)
