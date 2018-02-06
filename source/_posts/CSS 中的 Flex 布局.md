@@ -24,7 +24,7 @@ tags:
 	  display: flex;
 	}
 	
-##### 注意：设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+##### 注意：设为 `Flex` 布局以后，子元素的`float``clear`和`vertical-align`属性将失效。
 
 ---
 采用`Flex`布局的元素，称为`Flex`容器。它的所有子元素自动成为容器成员，称为 Flex 项目。
@@ -45,7 +45,7 @@ tags:
 	
 ##### 3.`flex-flow`属性是`flex-direction`属性和`flex-wrap`属性的简写形式
 
-	默认值为`row` `nowrap`
+	默认值为 row nowrap 
 
 ##### 4.`justify-content`属性定义了项目在主轴上的对齐方式。
 

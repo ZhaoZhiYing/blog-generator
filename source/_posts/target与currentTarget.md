@@ -21,8 +21,8 @@ tags:
   </div>
 
 grand.addEventListener('click',function(e){
-    console.log(e.target);  
-    console.log(e.currentTarget); 
+    console.log(e.target)
+    console.log(e.currentTarget)
 },false)
 //当点击 child 是，打印结果是：child  grand 
 //这时的 this 指向 grand
@@ -41,8 +41,8 @@ grand.addEventListener('click',function(e){
   </div>
 
 child.addEventListener('click',function(e){
-    console.log(e.target);  
-    console.log(e.currentTarget); 
+    console.log(e.target)
+    console.log(e.currentTarget)
 },false)
 //当点击 child 是，打印结果是：child  child
 //这时的 this 指向 child
