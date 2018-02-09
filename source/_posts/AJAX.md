@@ -34,7 +34,7 @@ tags:
 如何使用原生`JS`来发送`AJAX`请求？（`XMLHttpRequest`）
 
 ```
-//main.js
+//前端代码
 myButton.addEventListener('click', (e)=>{
  let request = new XMLHttpRequest()
  request.onreadystatechange = () =>{ 
@@ -164,6 +164,149 @@ http://baidu.com:80 可以向 http://baidu.com:81 发 AJAX 请求吗 //no
  `)
  response.end()
 }
+```
+
+---
+
+##### `JS`获取请求与响应
+
+```
+myButton.addEventListener('click', (e)=>{
+   let request = new XMLHttpRequest()
+   request.open('POST', '/xxx') //设置请求第一部分
+   request.setRequestHeader('zz', '18') //设置请求第二部分
+   request.setRequestHeader('Content-Type', 'x-www-form-urlencoded')
+   request.send('我是第四部分') //设置请求第四部分
+   request.onreadystatechange = () =>{ 
+        if(request.readyState === 4){
+            console.log('请求响应完毕')
+            console.log(request.status) //获取响应第一部分 
+            console.log(request.statusText) //获取响应第一部分 
+            if(request.status >= 200 && request.status < 300){
+                console.log('请求成功')
+                console.log(request.getAllResponseHeaders())//获取响应第二部分
+                console.log(request.getResponseHeader('Content-Type'))//获取响应第二部分
+                console.log(request.responseText)//获取响应第四部分
+            }else if(request.status >= 400){
+                console.log('请求失败')
+            }
+        }
+    }
+})
+```
+
+---
+
+##### `window.jQuery.ajax`
+
+```
+window.jQuery = function(nodeOrSelector){
+   let nodes = {}
+   nodes.addClass = function(){}
+   nodes.html = function(){}
+   return nodes
+}
+   
+window.$ = window.jQuery
+ 
+window.jQuery.ajax = function(options){
+     // arguments 接受两种参数
+      let url
+      if(arguments.length === 1){
+          url = options.url
+      }else if(arguments.length === 2){
+          url = arguments[0]//这时候是 options
+          options = arguments[1] //纠正
+      }
+      let method = options.method
+     let body = options.body
+     let successFn = options.successFn
+     let failFn = options.failFn
+     let headers = options.headers 
+     let request = new XMLHttpRequest()
+     request.open(method, url) // 配置 request
+     for(let key in headers){
+         let value = headers[key]
+         request.setRequestHeader(key, value)
+     }
+     request.onreadystatechange = ()=>{ 
+       if(request.readyState === 4){     
+             if(request.status >= 200 && request.status < 300){
+               successFn.call(undefined, request.responseText) // call 给使用方叫 callback （回调）
+             }else if(request.status >= 400){
+               failFn.call(undefined, request)
+             }
+         }
+     }
+   request.send(body) 
+}
+	   
+function f1(responseText){}
+function f2(responseText){}
+ 	   
+window.jQuery.ajax({
+    url: '/xxx', 
+    method: 'post', 
+    headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'frank': '18'
+    },
+    successFn: (x)=>{
+        f1.call(undefined,x)
+        f2.call(undefined,x)
+    }, 
+    failFn: (x)=>{
+        console.log(x)
+    },
+})
+```
+
+##### `promise`
+
+```
+window.jQuery = function(nodeOrSelector){
+    let nodes = {}
+    nodes.addClass = function(){}
+    nodes.html = function(){}
+    return nodes
+ }
+    
+ window.$ = window.jQuery
+  
+ // ES6 析构赋值
+ window.jQuery.ajax = function({url, method, body, headers}){
+      // promise
+      return new Promise(function(resolve, reject){
+          let request = new XMLHttpRequest()
+          request.open(method, url) // 配置 request
+          for(let key in headers){
+              let value = headers[key]
+              request.setRequestHeader(key, value)
+          }
+          request.onreadystatechange = ()=>{ 
+              if(request.readyState === 4){     
+                  if(request.status >= 200 && request.status < 300){
+                      resolve.call(undefined, request.responseText) // call 给使用方叫 callback （回调）
+                  }else if(request.status >= 400){
+                      reject.call(undefined, request)
+                  }
+              }
+          }
+          request.send(body) 
+      }) 
+ }
+         
+ window.jQuery.ajax({
+     url: '/xxx', 
+     method: 'post', 
+     headers: {
+         'content-type': 'application/x-www-form-urlencoded',
+         'frank': '18'
+     }
+ }).then(
+    (text)=>{console.log(text)},
+    (request)=>{console.log(request)}
+ )
 ```
 
 ---

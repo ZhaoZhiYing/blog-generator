@@ -113,7 +113,7 @@ tags:
 		
 	curl -X POST -d "username=ff&password=123" -s -v  -- "http://localhost:8080/path"
 		
-	-X	curl 默认的 HTTP 动词是 GET，使用 -X 参数可以支持其他动词。
+	-X curl 默认的 HTTP 动词是 GET，使用 -X 参数可以支持其他动词。
 	-s 不显示进度条
 	-v 显示请求和响应
 	-H 添加响应头
