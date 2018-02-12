@@ -23,8 +23,8 @@ tags:
 	<link rel=“stylesheet” href=“style.css” media=“(max-width: 320px)”>	
 	
 避免`css`层叠覆盖：
-1.范围条件不要有交集 
-2.范围大的写在前面  
+1.范围条件不要有交集。 
+2.范围大的写在前面。  
 	
 ------
    
@@ -48,13 +48,24 @@ tags:
 
 ------
 
-##### 3.方法一：使用`JS`动态调整`REM`
+##### 3.方法一：使用`JS`动态调整`rem`
+由于`rem`代表根元素（`html`元素）的 `font-size` 大小。那么可以先设置`1rem = html 的 font-size = 1page width`，这样后面就可以按比例直接调整`rem`。
 
 	 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	 <script>
 	     var pageWidth = window.innerWidth
-	     document.write('<style>html{font-size:'+pageWidth/10+'px;}</style>')
+	     document.write('<style>html{font-size:'+pageWidth/10+'px;}</style>') 
 	 </script>
+	 
+	 // pageWidth/10 是将 rem 调整成整数，1rem = 0.1 html 的 font-size	 
+ 
+`rem`可以与其他单位同时存在
+	
+	p{
+		font-size: 16px;
+		border: 1px solid red; //很小的单位上，可以用 px 或 em，比如线条。
+		width: 0.5rem; 
+	}
  
 ##### 方法二：在`scss`文件里添加，这个方法可实现`px`自动变`rem`
 
@@ -62,7 +73,7 @@ tags:
 	  @return $px/$designWidth*10 + rem;
 	}
 	
-	$designWidth : 750;  
+	$designWidth : 750; // 750 是设计稿的宽度。 
 	
 	.child{
 	  width: px(375);
