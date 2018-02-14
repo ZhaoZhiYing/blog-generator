@@ -27,7 +27,7 @@ tags:
 	* animation-delay 设置动画何时开始，以秒或毫秒计。默认是 0。
 	
 	* animation-direction 设置动画在每次运行完后是反向运行还是重新回到开始位置重复运行。默认是 "normal"。
-		normal	正常播放。
+		normal 正常播放。
 		reverse 反向播放。
 		alternate 动画在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。
 		alternate-reverse 动画在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。
@@ -46,9 +46,9 @@ tags:
 		paused 指定暂停动画。
 		running 指定正在运行的动画。
 		
-	* animation-timing-function 设置动画速度， 即通过建立加速度曲线，设置动画在关键帧之间是如何变化。默认是 "ease"
-		linear	动画从头到尾的速度是相同的。
-		ease 动画以低速开始，然后加快，在结束前变慢。	测试
+	* animation-timing-function 设置动画速度，即通过建立加速度曲线，设置动画在关键帧之间是如何变化。默认是 "ease"
+		linear 动画从头到尾的速度是相同的。
+		ease 动画以低速开始，然后加快，在结束前变慢。
 		ease-in 动画以低速开始。
 		ease-out 动画以低速结束。
 		ease-in-out 动画以低速开始和结束。
@@ -69,22 +69,22 @@ tags:
 属性
 
 ```
-* transition-property	规定设置过渡效果的 CSS 属性的名称。
+* transition-property 规定设置过渡效果的 CSS 属性的名称。
 	none 没有属性会获得过渡效果。
-	all	 所有属性都将获得过渡效果。
+	all 所有属性都将获得过渡效果。
 	property 定义应用过渡效果的 CSS 属性名称列表，列表以逗号分隔。
 
-* transition-duration	规定完成过渡效果需要多少秒或毫秒。 默认值是 0，意味着不会有效果。
+* transition-duration 规定完成过渡效果需要多少秒或毫秒。 默认值是 0，意味着不会有效果。
 
-* transition-timing-function	规定速度效果的速度曲线。
-	linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+* transition-timing-function 规定速度效果的速度曲线。
+	linear 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
 	ease 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
 	ease-in 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
 	ease-out 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
 	ease-in-out 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
 	cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
 
-* transition-delay	定义过渡效果何时开始。以秒或毫秒计。
+* transition-delay 定义过渡效果何时开始。以秒或毫秒计。
 ```
 
 比如，将鼠标悬停在一个 `div` 元素上，逐步改变表格的宽度：
