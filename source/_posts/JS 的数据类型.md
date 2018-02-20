@@ -35,11 +35,12 @@ tags:
 	(2) 二进制：0b开头
 	(3) 八进制：0开头
 	(4) 十六进制：0x开头
+	
 -------
 
 #### 2.`string`(字符串）
  
-	(1) 用 ‘’或“”引起来
+	(1) 用 '' 或 "" 引起来
 	(2)转义符：\（同命令行回车：\ ）
 	(3)连接符：+（+ 写在每行结尾，适用于多行字符串）
 	(4)反引号：`（`写在开头结尾，适用于多行字符串，每行含有一个回车）
@@ -47,7 +48,7 @@ tags:
 
 #### 3.`boolean`(布尔值）
 
-	true（真）和false（假）两个特定值
+	true（真）和 false（假）两个特定值
 	
 -------
 
@@ -194,10 +195,18 @@ obj instanceof Object //true
 obj instanceof Array //false
 ```
 
+##### 检测对象 `toString()` 
+为了每个对象都能通过 `Object.prototype.toString()` 来检测，需要以 `Function.prototype.call()` 或者 `Function.prototype.apply()` 的形式来调用，传递要检查的对象作为第一个参数。
+
+	var toString = Object.prototype.toString
+	
+	toString.call(new Date(1995, 11, 17)) // "[object Date]"
+	toString.call('1') // "[object String]"
+	toString.call(1) // "[object Number]"
+	toString.call(Math) // "[object Math]"
+
 -------
 
 参考：
-
-[阮一峰的《JavaScript 标准参考教程》](http://javascript.ruanyifeng.com/grammar/function.html)
 
 [写代码啦] (https://xiedaimala.com/)

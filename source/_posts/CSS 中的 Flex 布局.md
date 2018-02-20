@@ -17,7 +17,7 @@ tags:
 	  display: inline-flex;
 	}
 
-##### Webkit 内核的浏览器(Chrome,Mac OS X的Safari)，必须加上-webkit前缀。
+`Webkit` 内核的浏览器(`Chrome`，`Safari`)，必须加上 `-webkit` 前缀。
 
 	.box{
 	  display: -webkit-flex; /* Safari */
@@ -49,29 +49,29 @@ tags:
 
 ##### 4.`justify-content`属性定义了项目在主轴上的对齐方式。
 
-		flex-start（默认值）：左对齐
-		flex-end：右对齐
-		center： 居中
-		space-between：两端对齐，项目之间的间隔都相等。
-		space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+	flex-start（默认值）：左对齐
+	flex-end：右对齐
+	center： 居中
+	space-between：两端对齐，项目之间的间隔都相等。
+	space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
 		
 ##### 5.`align-items`属性定义项目在交叉轴上如何对齐。
 
-		flex-start：交叉轴的起点对齐。
-		flex-end：交叉轴的终点对齐。
-		center：交叉轴的中点对齐。
-		baseline: 项目的第一行文字的基线对齐。
-		stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+	flex-start：交叉轴的起点对齐。
+	flex-end：交叉轴的终点对齐。
+	center：交叉轴的中点对齐。
+	baseline: 项目的第一行文字的基线对齐。
+	stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
 		
 ##### 6.`align-content`属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
 
-		flex-start：与交叉轴的起点对齐。
-		flex-end：与交叉轴的终点对齐。
-		center：与交叉轴的中点对齐。
-		space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
-		space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
-		stretch（默认值）：轴线占满整个交叉轴。
-		
+	flex-start：与交叉轴的起点对齐。
+	flex-end：与交叉轴的终点对齐。
+	center：与交叉轴的中点对齐。
+	space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+	space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+	stretch（默认值）：轴线占满整个交叉轴。
+	
 #### `item`项目属性：
 
 ##### 1.`order`属性定义项目的排列顺序

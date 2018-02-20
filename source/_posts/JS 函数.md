@@ -8,17 +8,17 @@ tags:
 函数就是一段可以反复调用的代码块。
 
 -------
-#### 函数的5种声明
+#### 函数的几种声明
    
-##### 1.`function`命令(函数声明)
+##### 1.函数声明（`function`命令）
 
 	function print(s){ //print是函数名，也叫标识符
 		console.log(s) //这是函数体
 	} //函数的声明在结尾的大括号后面不用加分号	
 
 	
-##### 2.函数表达式(匿名)
-
+##### 2.函数表达式
+	
 	//采用函数表达式声明函数时， function 命令后面不带有函数名。
 	var print = function (s){ 
 		console.log(s)
@@ -31,16 +31,7 @@ tags:
 	f// ReferenceError: f is not defined
 	print()// function	
 
-	
-##### 3.函数表达式(具名)
-
-	var print = function f(s){ 
-	  console.log(s) 
-	}
-
-	
-##### 4.`Function`构造函数
-
+##### 3.`Function` 构造函数
 	var add = new Function(
 	  'x',
 	  'y',
@@ -52,7 +43,7 @@ tags:
 	} 
 
 	
-##### 5.箭头函数(匿名)`(x , y) => { return x + y }`
+##### 4.箭头函数(匿名)`(x , y) => { return x + y }`
 引入箭头函数有两个方面的作用：更简短的函数并且不绑定自己的`this`
 
 	(参数1, 参数2, …, 参数N) => {函数声明}
@@ -238,21 +229,5 @@ a // 1
 
 -------
 
-##### `Call Stack`先入后出
-`call stack`调用堆栈，调用堆栈是一个方法列表，按调用顺序保存所有在运行期被调用的方法。
-
-
-	function a(){
-		console.log('a')
-		return a
-	}
-	a.call() 
-		
-	* 当调用时，a.call() 会被记在 call stack 里。
-	* 接着 console.log('a') 记在 call stack 里。
-	* return a 到这一步时`console.log('a') 会存在 a.call() 里，最后 a.call() 退出。
-
-
--------
 
 参考：[写代码啦] (https://xiedaimala.com/)
