@@ -87,7 +87,7 @@ JS理解：数据就是原型链中有 `Array.prototype` 的对象。
 
 这时当检测`Array`实例时，`Array.isArray` 优于 `instanceof`,因为`Array.isArray`能检测`iframes`。
 
-示例
+举例
 	
 	var iframe = document.createElement('iframe')
 	document.body.appendChild(iframe)
@@ -112,7 +112,7 @@ JS理解：数据就是原型链中有 `Array.prototype` 的对象。
     var arr = Array.prototype.slice.call(fakeArray)
     //fakeArray 表示一个伪数组
     
-示例
+举例
 
 	var fakeArray = {0:'a',1:'b',length:2} //伪数组
 	var arr1 = Array.prototype.slice.call(fakeArray)

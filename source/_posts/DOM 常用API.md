@@ -1,9 +1,10 @@
 ---
-title: DOM 常用 API
+title: DOM 常用API
 date: 2017-12-30 20:47:31
 tags:
 ---
-##### DOM 理解
+
+##### `DOM` 理解
 	DOM（Document Object Model）是一棵树，树上有 Node ，Node 是一个构造函数（object 的一种）。
 	Node 分为 Document（html）、Element（标签）和 Text（文本），以及其他不重要的 Attribute（属性）、Comment（注释）。
 	
@@ -13,7 +14,7 @@ tags:
 
 ------
 
-##### DOM 主要功能
+##### `DOM` 主要功能
 	页面中的节点通过构造函数构造出对应的对象，这也叫 DOM API。￼
 	
 ------	
@@ -34,7 +35,7 @@ tags:
 
 ------
 
-#### Node 接口
+#### `Node` 接口
 ##### 属性
 
 	* childNodes 获取子节点（可以是文本、注释、属性） 
@@ -88,7 +89,7 @@ tags:
 	 
 ------
 
-#### Document 接口（查询接口，因为一般从 document 开始查）
+#### `Document` 接口（查询接口，因为一般从 document 开始查）
 ##### 属性
  
 	* characterSet 字符编码，比如‘UTF-8’
@@ -125,7 +126,7 @@ tags:
            
 ------
          
-#### Element 的接口
+#### `Element` 的接口
 `DOM API`获取的`Elements`都是伪数组
 ##### 属性
 
@@ -139,11 +140,10 @@ tags:
 	* id 元素id
 	
 	* attributes 所有显性属性
-	* innerHTML 元素内部的HTML标记
-	* outerHTML 包含元素在内的HTML标记
+	* innerHTML 获取从对象的起始位置到终止位置的全部内容,不包括 Html 标签。
 	
-	* clientWidth 内容区 + padding的宽度
-	* clientHeight 内容区 + padding的高度
+	* clientWidth 内容区 + padding 的宽度
+	* clientHeight 内容区 + padding 的高度
 	* scrollHeight 元素中可以滚动的高度
 	* scrollWidth 元素中可以滚动的宽度
 	* scrollTop 元素中的内容已经向上滚出去多少
@@ -151,12 +151,10 @@ tags:
 	
 ##### 方法	
 
-	* setAttribute() 创建或改变某个新属性
-	* getAttribute() 通过名称获取属性的值
+	* setAttribute() 设置或者改变指定属性并指定值
+	* getAttribute() 返回指定元素的属性值
+	* removeAttribute() 从元素中删除指定的属性
 	* getElementsByClassName() 根据元素的 class 属性获取所有元素
-		
-	* createElement 通过传入指定的一个标签名来创建一个元素
-	* createTextNode 创建一个文本节点
 
 ----
 
