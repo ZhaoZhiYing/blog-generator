@@ -1,6 +1,7 @@
 ---
 title: JS 的数据类型
 date: 2017-12-28 11:53:47
+categories: JavaScript
 tags:
 ---
 `JavaScript`语言的每一个值，都属于某一种数据类型。`JavaScript`的数据类型，共有七种。

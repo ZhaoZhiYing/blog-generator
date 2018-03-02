@@ -1,6 +1,7 @@
 ---
 title: JS 内存
 date: 2018-01-09 16:10:48
+categories: JavaScript
 tags:
 ---
 

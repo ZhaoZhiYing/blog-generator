@@ -1,6 +1,7 @@
 ---
 title:  HTML 标签
 date: 2017-10-24 10:32:19
+categories: HTML
 tags:
 ---
 
@@ -51,21 +52,21 @@ tags:
 	2. Content-type: application/octet-stream
 
 ### `<form>`标签
-跳转页面（主要使用POST 请求，参数放到第四部分from datas）（使用GET请求时，参数默认放到查询参数）
+跳转页面（主要使用 `POST` 请求，参数放到第四部分`from datas`）（使用 `GET` 请求时，参数默认放到查询参数）
 
 	 1.如果 form 表单里没有提交按钮，就无法提交
-	 2.form 标签主要用来发起post请求
+	 2.form 标签主要用来发起 post 请求
 	 3.name 属性值显示在第四部分
 	 4.target 属性同 a 标签
 
-##### 注意：a标签和form标签都是用来发请求，a标签是get，form标签是post
+##### 注意：`a` 标签和 `form` 标签都是用来发请求，`a` 标签是 `get`，`form` 标签是 `post`
 
 ### `<input>`标签
-input没有子元素，button有子元素
+`input` 没有子元素，`button` 有子元素
 
-    type属性 
-	1.如果一个form只有一个按钮button，没写type，自动升级为sunmit可提交。
-	  submit是唯一能确定type能不能提交的按钮，button只是一个普通按钮。
+    type 属性 
+	1.如果一个 form 只有一个按钮 button，没写 type，自动升级为 sunmit 可提交。
+	  submit 是唯一能确定 type 能不能提交的按钮，button 只是一个普通按钮。
 	2.checkbox: 单选框
 	3.radio: 复选框
 	
@@ -75,7 +76,8 @@ input没有子元素，button有子元素
 下拉列表
 ### `<textarea>`标签
 输入多行文本
-1.通过 cols 和 rows 属性来规定 textarea 的尺寸，更好的办法是使用 CSS 的height 和 width 属性
+
+通过 `cols` 和 `rows` 属性来规定 `textarea` 的尺寸，更好的办法是使用 `CSS` 的 `height` 和 `width` 属性。
 
 ### `<table>`标签
 表格

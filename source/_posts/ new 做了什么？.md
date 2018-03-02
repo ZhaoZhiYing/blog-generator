@@ -1,6 +1,7 @@
 ---
 title: new 做了什么？
 date: 2018-01-23 15:27:32
+categories: JavaScript
 tags:
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: JS 的构成  
 date: 2017-12-21 21:06:21
+categories: JavaScript
 tags:
 ---
 ### `JavaScript`是什么？

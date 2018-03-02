@@ -1,6 +1,7 @@
 ---
 title: Cookie
 date: 2018-02-05 09:29:27
+categories: HTTP
 tags:
 ---
 

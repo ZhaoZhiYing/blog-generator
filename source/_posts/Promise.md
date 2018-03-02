@@ -1,6 +1,7 @@
 ---
 title: Promise
 date: 2018-01-30 22:26:59
+categories: JavaScript
 tags:
 ---
 #### 「同步」和「异步」

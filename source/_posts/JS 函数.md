@@ -1,6 +1,7 @@
 ---
 title: JS 函数
 date: 2017-12-29 19:14:26
+categories: JavaScript
 tags:
 ---
 #### 什么是函数
@@ -104,6 +105,22 @@ tags:
 #### `return`
 * 每个函数都有`return`。
 * 如果你不写`return`，就相当于写了`return undefined`。
+
+作用：返回一个值给函数，并且结束函数执行。
+
+	function foo(a,b){      
+		return a + b;
+	} 
+	foo(2,3) //5
+	
+
+	function foo(){
+		console.log(1);       
+		return;
+		console.log(2);
+	} 
+	foo() //1
+
 	
 -------
 

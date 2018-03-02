@@ -1,6 +1,7 @@
 ---
 title: CSS 移动端页面
 date: 2017-12-13 16:07:34
+categories: CSS
 tags:
 ---
 #### 先了解什么是响应式页面？

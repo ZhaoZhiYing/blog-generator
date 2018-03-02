@@ -1,6 +1,7 @@
 ---
 title: this 到底是什么？ 
 date: 2018-01-19 22:18:01
+categories: JavaScript
 tags:
 ---
 #### 全局作用域

@@ -1,6 +1,7 @@
 ---
 title: DOM 事件
 date: 2018-01-04 15:31:21
+categories: JavaScript
 tags:
 ---
 

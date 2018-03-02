@@ -1,6 +1,7 @@
 ---
 title: JS 的三大对象
 date: 2018-01-07 21:24:37
+categories: JavaScript
 tags:
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: JSONP
 date: 2018-01-25 10:18:42
+categories: HTTP
 tags:
 ---
 

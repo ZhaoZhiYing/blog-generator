@@ -1,6 +1,7 @@
 ---
 title: DOM 常用API
 date: 2017-12-30 20:47:31
+categories: JavaScript
 tags:
 ---
 

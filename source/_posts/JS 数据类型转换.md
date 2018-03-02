@@ -1,6 +1,7 @@
 ---
 title: JS 数据类型转换
 date: 2018-02-14 20:45:49
+categories: JavaScript
 tags:
 ---
 

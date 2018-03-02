@@ -1,12 +1,14 @@
 ---
 title: canvas
 date: 2018-02-11 00:04:54
+categories: JavaScript
 tags:
 ---
 
 #### 基本用法
 * `canvas`负责在页面中设定一个区域，然后就可以通过`JS`动态地在这个区域中绘制图形。
 * `canvas`默认是 `display: inline-block;`
+* `canvas`默认大小为 `宽300像素×高150像素`。
 * 要使用`canvas`元素，必须先设置`width` `height`属性，指定可以绘图的区域大小。
 
 ```

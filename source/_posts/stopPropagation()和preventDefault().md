@@ -1,6 +1,7 @@
 ---
-title: stopPropagation()和preventDefault()
+title: stopPropagation() 和 preventDefault()
 date: 2018-02-21 18:03:41
+categories: JavaScript
 tags:
 ---
 

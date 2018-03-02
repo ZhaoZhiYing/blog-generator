@@ -1,6 +1,7 @@
 ---
 title: 实现一个 jQuery 的 API
 date: 2018-01-01 16:44:38
+categories: JavaScript
 tags:
 ---
 #### `getSiblings`获取一个节点的所有兄弟节点

@@ -1,6 +1,7 @@
 ---
-title: target与currentTarget
+title: target 与 currentTarget
 date: 2018-02-03 18:56:13
+categories: JavaScript
 tags:
 ---
 

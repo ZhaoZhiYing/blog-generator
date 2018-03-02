@@ -1,6 +1,7 @@
 ---
 title: AJAX
 date: 2018-01-29 23:08:55
+categories: HTTP
 tags:
 ---
 #### 历史背景
