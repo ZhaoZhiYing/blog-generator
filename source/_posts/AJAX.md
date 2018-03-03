@@ -6,16 +6,17 @@ tags:
 ---
 #### 历史背景
 ##### 如何发请求？
-* `form`可以发`get` `post`请求，但是会刷新页面或新开页面
-* `a`标签可以发`get`请求，但是会刷新页面或新开页面
-* `img` 可以发`get`请求，但是只能以图片的形式展示
-* `link`可以发`get`请求，但是只能以 `CSS` `favicon` 的形式展示
-* `script`可以发`get`请求，但是只能以脚本的形式运行
+
+	* form 可以发 get post 请求，但是会刷新页面或新开页面
+	* a 标签可以发 get 请求，但是会刷新页面或新开页面
+	* img 可以发 get 请求，但是只能以图片的形式展示
+	* link 可以发 get 请求，但是只能以 CSS favicon 的形式展示
+	* script 可以发 get 请求，但是只能以脚本的形式运行
  
 那么问题来了，有没有什么方式可以实现？
 
-* `get` `post` `put` `delete` 请求都行
-* 想以什么形式展示就以什么形式展示
+	get post put delete 请求都行
+	想以什么形式展示就以什么形式展示
 
 ##### 微软的突破
 `IE 5` 率先在 `JS` 中引入 `ActiveX` 对象（API），使得 `JS` 可以直接发起 HTTP 请求。
@@ -24,9 +25,9 @@ tags:
 ##### `AJAX`诞生
 2005年，Jesse James Garrett 发表了一篇在线文章，在这篇文章里介绍了一种技术，叫 `AJAX`，是对 `Asynchronous JavaScript + XML` 的简写，译为异步的`JavaScript`和`XML`。
 
-1. 使用 `XMLHttpRequest` 发请求
-2. 服务器返回 `XML` 格式的字符串 (`XML`后来被`JSON`取代)
-3. `JS` 解析 `XML`，并更新局部页面
+	1. 使用 XMLHttpRequest 发请求
+	2. 服务器返回 XML 格式的字符串 (XML 后来被 JSON 取代)
+	3. JS 解析 XML ，并更新局部页面
 
 ---
 

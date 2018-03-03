@@ -4,6 +4,7 @@ date: 2017-12-11 18:01:25
 categories: CSS
 tags:
 ---
+
 `Flex`是`Flexible Box`的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
 
 ##### 任何一个容器都可以指定为`Flex`布局。
@@ -18,7 +19,7 @@ tags:
 	  display: inline-flex;
 	}
 
-`Webkit` 内核的浏览器(`Chrome`，`Safari`)，必须加上 `-webkit` 前缀。
+##### `Webkit` 内核的浏览器(`Chrome`，`Safari`)，必须加上 `-webkit` 前缀。
 
 	.box{
 	  display: -webkit-flex; /* Safari */
@@ -28,9 +29,14 @@ tags:
 ##### 注意：设为 `Flex` 布局以后，子元素的`float``clear`和`vertical-align`属性将失效。
 
 ---
-采用`Flex`布局的元素，称为`Flex`容器。它的所有子元素自动成为容器成员，称为 Flex 项目。
+
+采用 `Flex` 布局的元素，称为`Flex`容器。它的所有子元素自动成为容器成员，称为 `Flex` 项目。
 
 #### `flex-container`容器属性
+
+<img src="https://i.loli.net/2018/03/02/5a992f62c1b66.png
+">
+
 ##### 1.`flex-direction`属性决定主轴的方向（即项目的排列方向）
 
 	row（默认值）：主轴为水平方向，起点在左端。
@@ -100,4 +106,8 @@ tags:
 	该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
 	
 ----
-参考：[写代码啦](https://xiedaimala.com/)
+参考：
+
+[写代码啦](https://xiedaimala.com/)
+
+[阮一峰 - Flex 布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
