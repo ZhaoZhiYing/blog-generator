@@ -60,44 +60,18 @@ localStorage.key(index) 得到某个索引的 key
         }
     </script>
 
+##### `Cookie` 和 `LocalStorage`的区别？
+
+	1. LocalStorage 跟 HTTP 无关，HTTP 不会带上 LocalStorage 的值。而 Cookie 属于 HTTP 的一部分，会被附加在每个 HTTP 请求中。
+	2. 一般来说，LocalStorage 最大存储量为 5MB ，Cookie 最大存储量为 4MB 。 
+	3. Cookie 默认在用户关闭页面后失效，但是后端可以强制设置有效期。LocalStorage 是永久有效，除非用户清理缓存。
+
+
 ---
 
 #### `SessionStorage`
 
 ##### `SessionStorage` 和 `LocalStorage` 比较？
-
-相同点
-
-	* 都是用于客户端存储数据。
-	* 存储数据的格式都是字符串形式。
-	* 具有相同的 API 。
-
-不同点
-
-	* LocalStorage 永久有效，除非用户清理缓存。
-	* SessionStorage 不是永久有效，当用户关闭浏览器窗口后，数据会被删除。
-	* 相同浏览器的不同页面间可以共享相同的 LocalStorage （页面属于相同域名和端口），但不能共享 SessionStorage 的信息。
-	
-	//页面及标签页指顶级窗口，如果一个标签页包含多个 iframe 标签且他们属于同源页面，那么可以共享 SessionStorage 。
-
----
-
-
-#### 问题归纳
-
-##### 1.`Cookie` 和 `Session` 的关系？
-
-	Session 是基于 Cookie 实现的。
-
-
-##### 2.`Cookie` 和 `LocalStorage`的区别？
-
-	LocalStorage 跟 HTTP 无关，HTTP 不会带上 LocalStorage 的值。而  Cookie 属于 HTTP 的一部分，会被附加在每个 HTTP 请求中。
-	* 一般来说， LocalStorage 最大存储量为 5MB ，Cookie 最大存储量为 4MB 。 
-	* Cookie 默认在用户关闭页面后失效，但是后端可以强制设置有效期。LocalStorage 是永久有效，除非用户清理缓存。
-
-
-##### 3.`SessionStorage` 和 `LocalStorage` 比较？
 
 相同点
 

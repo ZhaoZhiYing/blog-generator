@@ -42,13 +42,18 @@ tags:
 
 ##### `Session`是什么？
 
+`Session` 是在无状态的 `HTTP` 协议下，服务端记录用户状态时用于标识具体用户的机制。
+
 * `Session`解决了`Cookie`的安全性问题。
 * `Session`是服务器上的`hash表`。
+
+
+##### `Session`的用法
 
 ```
 1. 服务器通过 cookie 给用户一个 sessionId (随机数)。
 2. 服务器有一块内存（哈希表）保存了所有的 session 。 
-3. 每次用户访问服务器的时候，服务器通过 sessionId 去读取对应的 session ，得到用户的隐私信息，比如 id email 。
+3. 每次用户访问服务器的时候，服务器通过 sessionId 去读取对应的 session，得到用户的隐私信息，比如 id email 。
 ```
 
 举例`server.js`
@@ -64,7 +69,38 @@ response.setHeader('Set-Cookie',`sessionId = ${sessionId}`)
 
 #### 不基于 `Cookie` 的 `Session`
 
-`Session` 还可以通过查询参数和 `LocalStorage`来存储 `sessionId`。
+`Session` 还可以通过 `LocalStorage` + 查询参数 来存储 `sessionId`。
 
 ---
 
+#### 问题归纳
+
+##### 1.`Cookie`如何设置过期时间？
+
+	cookie.setMaxAge(0);//不记录cookie
+	
+	cookie.setMaxAge(-1);//会话级cookie，关闭浏览器失效
+	
+	cookie.setMaxAge(60*60);//过期时间为1小时
+	
+
+##### 2.如何删除 `Cookie`？
+
+设置 `Expires` 参数为以前的时间即可。
+
+	document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+
+##### 3.`Cookie` 和 `Session` 的关系以及区别？
+
+关系
+
+	Session 通常是基于 Cookie 实现，其 SessionId 是通过 Cookie 发送给客户端的。
+
+区别
+
+	1. Cookie 数据保存在客户端。Session 数据保存在服务器端。
+	2. 由于在 HTTP 请求中的 Cookie 是明文传递的，所以安全性成问题，用户能够篡改密码。所以一般情况，登录信息等重要信息存储在 Session 中，其他信息存储在 Cookie 中。 
+
+
+---	
