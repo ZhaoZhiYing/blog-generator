@@ -127,4 +127,70 @@ JS
 	
 	同时DOM3级事件也允许使用者自定义一些事件。
 	
-------		
+---
+
+#### 常用事件归纳
+
+##### 鼠标事件
+
+	* onclick //当用户点击某个对象时调用的事件句柄。
+	* oncontextmenu //在用户点击鼠标右键打开上下文菜单时触发。
+	* ondblclick //当用户双击某个对象时调用的事件句柄。
+	* onmousedown //鼠标按钮被按下。
+	* onmouseenter //当鼠标指针移动到元素上时触发。
+	* onmouseleave //当鼠标指针移出元素时触发
+	* onmousemove //鼠标被移动。	
+	* onmouseover //鼠标移到某元素之上。	
+	* onmouseout //鼠标从某元素移开。	
+	* onmouseup //鼠标按键被松开。
+
+##### 键盘事件
+
+	* onkeydown //某个键盘按键被按下。	
+	* onkeypress //某个键盘按键被按下并松开。
+	* onkeyup //某个键盘按键被松开。		
+
+##### 表单事件
+
+	* onblur //元素失去焦点时触发	
+	* onchange //该事件在表单元素的内容改变时触发( <input>, <keygen>, <select>, 和 <textarea>)	
+	* onfocus //元素获取焦点时触发	
+	* onfocusin //元素即将获取焦点时触发	
+	* onfocusout //元素即将失去焦点时触发	
+	* oninput //元素获取用户输入时触发	
+	* onreset //表单重置时触发	
+	* onsearch //用户向搜索域输入文本时触发 ( <input="search">)
+	* onselect //用户选取文本时触发 ( <input> 和 <textarea>)
+	* onsubmit //表单提交时触发
+
+##### 动画事件
+
+	* animationend //该事件在 CSS 动画结束播放时触发 
+	* animationiteration //该事件在 CSS 动画重复播放时触发
+	* animationstart //该事件在 CSS 动画开始播放时触发
+
+##### 过渡事件
+
+	* transitionend //该事件在 CSS 完成过渡后触发。
+
+##### 事件对象
+
+	* preventDefault() //通知浏览器不要执行与事件关联的默认动作。
+	* stopPropagation() //不再派发事件。
+
+##### 目标事件对象
+
+	* addEventListener() //允许在目标事件中注册监听事件(IE8 = attachEvent())	
+	* removeEventListener() //运行一次注册在事件目标上的监听事件(IE8 = detachEvent())
+
+更多参考：[菜鸟教程](http://www.runoob.com/jsref/dom-obj-event.html)
+
+---	
+	
+
+
+
+
+
+
+	

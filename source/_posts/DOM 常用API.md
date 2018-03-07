@@ -65,7 +65,11 @@ tags:
 	* Node.appendChild(node) //向节点末尾添加一个子节点
 	* Node.removeChild(node) //删除子节点，在要删除节点的父节点上操作
 	* Node.replaceChild(newChild,oldChild) //替换节点
-	* Node.cloneNode(node) //复制节点，默认为false(克隆节点), true(克隆节点及其属性，以及后代)
+	* Node.cloneNode() //复制节点
+		语法：var dupNode = 被克隆节点.cloneNode(deep);
+		//deep 是否深拷贝，默认为 false ，浅拷贝只克隆节点。
+	   //如果为 true ，深拷贝克隆节点和属性，以及后代。
+
 	* Node.insertBefore(newNode,oldNode) //在指定子节点之前插入新的子节点
 	* Node.contains(node) //返回一个布尔值，表示参数节点是否为当前节点的后代节点。
 	* Node.hasChildNodes() //返回布尔值，表示当前节点是否有子节点
