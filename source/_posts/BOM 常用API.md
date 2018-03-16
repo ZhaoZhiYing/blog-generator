@@ -21,29 +21,33 @@ tags:
 
 属性
 
-	* Window.history //对 History 对象的只读引用。请参数 History 对象。
-	* Window.innerHeight //返回窗口的文档显示区的高度。
-	* Window.innerWidth //返回窗口的文档显示区的宽度。
-	* Window.self //返回对当前窗口的引用。等价于 Window 属性。
+	* Window.innerHeight //浏览器窗口的内部高度(包括滚动条)
+	* Window.innerWidth // 浏览器窗口的内部宽度(包括滚动条)
 	* Window.top //返回最顶层的父窗口。
 	* Window.parent //返回父窗口。
 
 方法
-
+	
+	//弹窗
 	* alert(字符串) //显示带有一段消息和一个确认按钮的警告框。
-	* prompt() //显示可提示用户输入的对话框。
-	* confirm() //显示带有一段消息以及确认按钮和取消按钮的对话框。
-	* open() //打开一个新的浏览器窗口或查找一个已命名的窗口。
-	* close() //关闭浏览器窗口。
-	* print() //打印当前窗口的内容。
-	* focus() //把键盘焦点给予一个窗口。
-	* blur() //把键盘焦点从顶层窗口移开。
-	* moveBy() //可相对窗口的当前坐标把它移动指定的像素。
-	* moveTo() //把窗口的左上角移动到一个指定的坐标。
-	* resizeBy() //按照指定的像素调整窗口的大小。
-	* resizeTo() //把窗口的大小调整到指定的宽度和高度。
-	* scrollBy() //按照指定的像素值来滚动内容。
-	* scrollTo() //把内容滚动到指定的坐标。
+	* prompt() //显示可提示用户输入的提示框。
+	* confirm() //显示带有一段消息以及确认按钮和取消按钮的确认框。
+	
+	* window.print() //打印当前窗口的内容。
+	* window.focus() //把键盘焦点给予一个窗口。
+	* window.blur() //把键盘焦点从顶层窗口移开。 
+	
+	* window.open() //打开一个新的浏览器窗口或查找一个已命名的窗口。
+	* window.close() //关闭浏览器窗口。
+	* window.moveBy(x,y) //可相对窗口的当前坐标把它移动指定的像素。
+	* window.moveTo(x,y) //把窗口的左上角移动到一个指定的坐标。
+	* window.resizeBy(width,height) //按照指定的像素调整窗口的大小。
+	* window.resizeTo(width,height) //把窗口的大小调整到指定的宽度和高度。
+	
+	* window.scrollBy(xnum,ynum) //按照指定的像素值来滚动内容。
+	* window.scrollTo(xpos,ypos) //把内容滚动到指定的坐标。
+	
+	//计时事件
 	* setInterval() //按照指定的周期（以毫秒计）来调用函数或计算表达式。
 	* setTimeout() //在指定的毫秒数后调用函数或计算表达式。
 	* clearInterval() //取消由 setInterval() 设置的 timeout。
@@ -62,18 +66,44 @@ tags:
 	* platform //返回运行浏览器的操作系统平台
 	* userAgent //返回由客户机发送服务器的 user-agent 头部的值
 
+举例
+
+	<div id="example"></div>
+	<script>
+	txt = "<p>浏览器代号: " + navigator.appCodeName + "</p>";
+	txt+= "<p>浏览器名称: " + navigator.appName + "</p>";
+	txt+= "<p>浏览器版本: " + navigator.appVersion + "</p>";
+	txt+= "<p>启用Cookies: " + navigator.cookieEnabled + "</p>";
+	txt+= "<p>硬件平台: " + navigator.platform + "</p>";
+	txt+= "<p>用户代理: " + navigator.userAgent + "</p>";
+	txt+= "<p>用户代理语言: " + navigator.systemLanguage + "</p>";
+	document.getElementById("example").innerHTML=txt;
+	</script> 
+
+><div id="example"></div>
+<script>
+	txt = "<p>浏览器代号: " + navigator.appCodeName + "</p>";
+	txt+= "<p>浏览器名称: " + navigator.appName + "</p>";
+	txt+= "<p>浏览器版本: " + navigator.appVersion + "</p>";
+	txt+= "<p>启用Cookies: " + navigator.cookieEnabled + "</p>";
+	txt+= "<p>硬件平台: " + navigator.platform + "</p>";
+	txt+= "<p>用户代理: " + navigator.userAgent + "</p>";
+	txt+= "<p>用户代理语言: " + navigator.systemLanguage + "</p>";
+	document.getElementById("example").innerHTML=txt;
+</script> 
+
 ---
 	
 ##### `Screen`对象
 
 属性
 
-	* availHeight //返回屏幕的高度（不包括Windows任务栏）
-	* availWidth //返回屏幕的宽度（不包括Windows任务栏）
-	* colorDepth //返回目标设备或缓冲器上的调色板的比特深度
-	* height //返回屏幕的总高度
-	* pixelDepth //返回屏幕的颜色分辨率（每象素的位数）
-	* width //返回屏幕的总宽度	
+	* screen.availHeight //可用的屏幕宽度（不包括 Windows 任务栏）
+	* screen.availWidth //可用的屏幕高度（不包括 Windows 任务栏）
+	* screen.height //返回屏幕的总高度
+	* screen.width //返回屏幕的总宽度
+	* screen.colorDepth //返回目标设备或缓冲器上的调色板的比特深度
+	* screen.pixelDepth //返回屏幕的颜色分辨率（每象素的位数）
 
 ---	
 	
@@ -81,13 +111,13 @@ tags:
 
 属性
 
-	* length //返回历史列表中的网址数
+	* history.length //返回历史列表中的网址数
 
 方法
 
-	* back() //加载 history 列表中的前一个 URL
-	* forward() //加载 history 列表中的下一个 URL
-	* go() //加载 history 列表中的某个具体页面
+	* history.back() //加载 history 列表中的前一个 URL
+	* history.forward() //加载 history 列表中的下一个 URL
+	* history.go() //加载 history 列表中的某个具体页面
 
 ---
 
@@ -95,14 +125,15 @@ tags:
 
 属性
 
-	* hash //返回一个URL的锚部分
-	* host //返回一个URL的主机名和端口
-	* hostname //返回URL的主机名
-	* href //返回完整的URL
-	* pathname //返回的URL路径名。
-	* port //返回一个URL服务器使用的端口号
-	* protocol //返回一个URL协议
-	* search //返回一个URL的查询部分
+	* location.hostname //返回 web 主机的域名
+	* location.port //返回 web 主机的端口 （80 或 443）
+	* location.protocol //返回所使用的 web 协议（http:// 或 https://）
+	* location.pathname //返回当前页面的路径和文件名。
+	
+	* location.href //返回完整的 URL
+	* location.hash //返回一个 URL 的锚部分
+	* location.host //返回一个 URL 的主机名和端口
+	* location.search //返回一个 URL 的查询部分
 
 方法
 
