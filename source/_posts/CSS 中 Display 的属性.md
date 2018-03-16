@@ -1,5 +1,5 @@
 ---
-title: CSS 中 Display 的属性
+title: CSS 中 display 的属性
 date: 2018-02-26 11:47:49
 categories: CSS
 tags:

@@ -128,10 +128,10 @@ tags:
 	* document.writeln() //用于向当前文档写入内容，尾部添加换行符。
 	
 	//生成节点
-	* document.createElement(tagName) //用来生成HTML元素节点。
-	* document.createTextNode(text) //用来生成文本节点
-	* document.createAttribute(name) //生成一个新的属性对象节点，并返回它。
-	* document.createDocumentFragment() //生成一个DocumentFragment对象
+	* document.createElement(tagName) //创建一个元素节点。
+	* document.createTextNode(text) //创建一个文本节点
+	* document.createAttribute(name) //创建一个属性对象节点，并返回它。
+	* document.createDocumentFragment() //创建一个DocumentFragment 对象
 	
 	//查找节点
 	* document.querySelector(selectors) //接受一个CSS选择器作为参数，返回第一个匹配该选择器的元素节点。

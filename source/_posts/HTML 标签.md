@@ -5,95 +5,97 @@ categories: HTML
 tags:
 ---
 
+> 除了`div`和`span`，其他标签都有默认样式。
 
->常见标签：a、form（表格）、input（表单，包含输入框和提交按钮）、button、h1、p、ul、ol、small、strong、div、span、kbd(键盘按键)、video（视频）、audio（音频）、svg（不规则图形）
->
->注意：除了`div`和`span`，其他标签都有默认样式
+[更多标签](http://www.runoob.com/tags/html-reference.html)
 
-### `iframe`标签
-在当前页面嵌套一个页面（可替换标签）(支持相对路径)
+#### `<iframe>`
 
-	1.默认宽100px高50px
-	2.默认有难看的border，所以默认写frameborder=0
-	3.name属性需结合a标签使用，否则无意义(name可结合a标签的target指定嵌套网页打开窗口)       
-	4.src指定路径（可以是相对路径）
+在当前页面嵌套一个页面。
 
+	* 默认宽 100px 高 50px
+	* 默认有难看的 border，可在 CSS 中设置。
 
-### `<a>`标签
-##### `target`属性
-   
-该属性指定在何处显示链接的资源。
-
-	* _self    默认属性。当前页面加载。
-	* _blank   新窗口打开
-	* _parent  父级页面打开。如果没有，同_self。
-	* _top     顶级页面加载。如果没有，同_self。 
+属性
 	
-##### `<href>`属性
+	* height //规定 <iframe> 的高度。
+	* width //规定 <iframe> 的宽度。
+	* name //规定 <iframe> 的名称。
+		//需结合 a 标签使用，否则无意义
+	* src 指定路径
+		绝对 URL - 指向另一个网站（比如 src="http://www.example.com/default.htm"）
+		相对 URL - 指向网站中的一个文件（比如 src="default.htm"）
+	
+	// HTML5 中的新属性
+	* srcdoc //规定页面中的 HTML 内容显示在 <iframe> 中。
+	* seamless //规定 <iframe> 看起来像是父文档中的一部分。
+	* sandbox //对 <iframe> 的内容定义一系列额外的限制。
+		"" //启用所有限制条件
+		allow-same-origin //允许将内容作为普通来源对待。如果未使用该关键字，嵌入的内容将被视为一个独立的源。
+		allow-top-navigation //嵌入的页面的上下文可以导航（加载）内容到顶级的浏览上下文环境。如果未使用该关键字，这个操作将不可用。
+		allow-forms //允许表单提交。
+		allow-scripts //允许脚本执行。
 
-必需属性。该属性规定链接的目标地址。
+示例一：`name`
 
-	* href="//qq.com" 无协议地址
-	* href="#xxx" 锚点#，不发起请求
-	* href="?name=qq" 发起请求
-	* href="./xxx.html" 相对路径 
-	* href="javascript:;" 让a标签不跳转
-	* href="javascript:alert(1)" 执行一段代码
-	* href="http://write.blog.csdn.net" 绝对 URL ，指向另一个站点
-	* a href=""；刷新页面
-	* href="#top" 返回到页面顶部
-	* href="#" 返回到页面顶部
+因为 `a` 链接的 `target` 属性匹配了 `ifrme` 的 `name` 属性，所以链接点击后将显示在 `iframe` 中。
+
+<img src="https://i.loli.net/2018/03/16/5aab6bff06e60.png
+">
+
+示例三：`src` `width` `height`
+
+<img src="https://i.loli.net/2018/03/16/5aab6b621ca04.png
+">
+
+示例二：`srcdoc`
+
+<img src="https://i.loli.net/2018/03/16/5aab6bdd59442.png
+">
+	
+---
+
+#### `<a>`
+
+属性
+
+	* target //该属性指定在何处显示链接的资源。
+		_self //默认属性。当前页面加载。
+		_blank //新窗口打开
+		_parent //父级页面打开。如果没有，同_self。
+		_top //顶级页面加载。如果没有，同_self。 
+	* href //规定链接的目标地址。
+		href="//qq.com" //无协议地址
+		href="#xxx" //锚点#，不发起请求
+		href="?name=qq" //发起请求
+		href="./xxx.html" //相对路径 
+		href="javascript:;" //让 a 标签不跳转
+		href="javascript:alert(1)" //执行一段代码
+		href="http://write.blog.csdn.net" //绝对 URL，指向另一个站点
+		a href="" //刷新页面
+		href="#top" //返回到页面顶部
+		href="#" //返回到页面顶部
+		
+	// HTML5 中的新属性
+	* download //指示浏览器下载 URL 而不是导航到 URL
+	* type //规定目标 URL 的 MIME 类型。仅在 href 属性存在时使用。
+		注：MIME 是指示文件的类型（描述的内容格式，例如声音文件可能会被标记  audio/ogg，或图像文件 image/png）
+	* media //规定目标 URL 的媒介类型。默认值：all。仅在 href 属性存在时使用。
+	...
 
 如何实现浏览器以下载形式接收请求，而不是显示页面？
 
-	1. a 标签里加 download
-	   <a href="/images/logo.png" download="logo">
+	// a 标签里加 download
+	<a href="/images/logo.png" download="logo">
 	
-	2. Content-type: application/octet-stream
-
-### `<form>`标签
-跳转页面（主要使用 `POST` 请求，参数放到第四部分`from datas`）（使用 `GET` 请求时，参数默认放到查询参数）
-
-	 1.如果 form 表单里没有提交按钮，就无法提交
-	 2.form 标签主要用来发起 post 请求
-	 3.name 属性值显示在第四部分
-	 4.target 属性同 a 标签
-
-##### 注意：`a` 标签和 `form` 标签都是用来发请求，`a` 标签是 `get`，`form` 标签是 `post`
-
-### `<input>`标签
-`input` 没有子元素，`button` 有子元素
-
-    type 属性 
-	1.如果一个 form 只有一个按钮 button，没写 type，自动升级为 sunmit 可提交。
-	  submit 是唯一能确定 type 能不能提交的按钮，button 只是一个普通按钮。
-	2.checkbox: 单选框
-	3.radio: 复选框
+	// HTTP 请求
+	Content-type: application/octet-stream
 	
-### `<label>`标签
-关联input（label的for值和input的name值一样，用于选项）（更聪明的写法是：用label标签包裹input标签，不需要for和name）
-### `<select>`标签
-下拉列表
-### `<textarea>`标签
-输入多行文本
+[更多属性](http://www.runoob.com/tags/tag-a.html)
 
-通过 `cols` 和 `rows` 属性来规定 `textarea` 的尺寸，更好的办法是使用 `CSS` 的 `height` 和 `width` 属性。
+---
 
-### `<table>`标签
-表格
-
-	tr(table row)元素定义表格行
-	th(table head)元素定义表头
-	td(table data)元素定义表格单元(数据)
-	
-### `<colgroup>`标签
-表格，可单独设置每列的宽，同col一起使用（col表示列）
-
-<img src="https://i.loli.net/2017/12/10/5a2d416f2959f.png">
-
-----
-
-### 常见空元素
+#### 常见空元素
 
 在`HTML`元素中，没有内容的`HTML`元素被称为空元素。大多数`HTML`标签在开始标签`start tag`和结束标签`end tag`之间都具有内容，而某些标签则没有内容。`HTML`中，从开始标签到结束标签的所有代码，被称为`HTML`元素。
 
@@ -115,7 +117,8 @@ tags:
 	<meta> 描述 HTML 文档的元数据（元数据是数据的数据信息），<meta> 标签
 	       通常位于 <head> 元素内部。
 
-----
+---
+
 参考：[写代码啦] (https://xiedaimala.com/)
 
 

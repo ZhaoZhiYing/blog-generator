@@ -1,5 +1,5 @@
 ---
-title: 从 MVC 到 MVVM
+title: MVC
 date: 2018-02-02 22:32:28
 categories: JavaScript
 tags:
