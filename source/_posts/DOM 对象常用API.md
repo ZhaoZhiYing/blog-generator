@@ -1,5 +1,5 @@
 ---
-title: DOM 常用API
+title: DOM 对象常用API
 date: 2017-12-30 20:47:31
 categories: JavaScript
 tags:
@@ -159,24 +159,29 @@ tags:
 
 	//特性属性
 	* Element.attributes //返回当前元素节点的所有属性节点
-	* Element.id //返回指定元素的id属性，可读写
-	* Element.tagName //返回指定元素的大写标签名
-	* Element.innerHTML //返回该元素包含的HTML代码，可读写
-	* Element.outerHTML //返回指定元素节点的所有HTML代码，包括它自身和包含的的所有子元素，可读写
+	* Element.id //设置或返回指定元素的 id
+	* Element.tagName //返回元素的标签名。
+	
+	* Element.innerHTML //设置或返回位于对象起始和结束标签内的 HTML
+	* Element.outerHTML //设置或返回对象及其内容的 HTML 
+	
 	* Element.className //返回当前元素的class属性，可读写
 	* Element.classList //返回当前元素节点的所有class集合
 	* Element.dataset //返回元素节点中所有的data-*属性。
 	
 	//尺寸属性
-	* Element.clientHeight //返回元素节点可见部分的高度
+	* Element.clientHeight //返回元素节点可见部分的高度。
+		//clientheight = padding + height - 横向滚动轴高度。
 	* Element.clientWidth //返回元素节点可见部分的宽度
 	* Element.clientLeft //返回元素节点左边框的宽度
 	* Element.clientTop //返回元素节点顶部边框的宽度
 	* Element.scrollHeight //返回元素节点的总高度
+		//scrollHeight = 可滚动高度，就是将滚动框拉直，不再滚动的高度。
 	* Element.scrollWidth //返回元素节点的总宽度
 	* Element.scrollLeft //返回元素节点的水平滚动条向右滚动的像素数值,通过设置这个属性可以改变元素的滚动位置
 	* Element.scrollTop //返回元素节点的垂直滚动向下滚动的像素数值
 	* Element.offsetHeight //返回元素的垂直高度(包含border,padding)
+		//offsetheight = padding + height + border + 横向滚动轴高度
 	* Element.offsetWidth //返回元素的水平宽度(包含border,padding)
 	* Element.offsetLeft //返回当前元素左上角相对于	* Element.offsetParent //节点的垂直偏移
 	* Element.offsetTop //返回水平位移

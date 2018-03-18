@@ -1,5 +1,5 @@
 ---
-title: BOM 常用API
+title: BOM 对象常用API
 date: 2018-02-23 21:54:46
 categories: JavaScript
 tags:
@@ -9,20 +9,24 @@ tags:
 
 `BOM`对象包括
 
-	* Window对象 //表示浏览器中打开的窗口  
-	* Navigator对象 //包含有关浏览器的信息  
-	* Screen对象 //包含有关客户端显示屏幕的信息
-	* History对象 //包含用户（在浏览器窗口中）访问过的 URL  
-	* Location对象 //包含有关当前 URL 的信息
+	* Window 对象 //表示浏览器中打开的窗口  
+	* Navigator 对象 //包含有关浏览器的信息  
+	* Screen 对象 //包含有关客户端显示屏幕的信息
+	* History 对象 //包含用户（在浏览器窗口中）访问过的 URL  
+	* Location 对象 //包含有关当前 URL 的信息
 
 ---
 
 ##### `Window`对象
 
+	* 如果文档包含框架（<frame> 或 <iframe> 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。
+
 属性
 
 	* Window.innerHeight //浏览器窗口的内部高度(包括滚动条)
+		//IE 中 body 元素的 clientHeight 属性与该属性相同。
 	* Window.innerWidth // 浏览器窗口的内部宽度(包括滚动条)
+		////IE 中 body 元素的 clientWidth 属性与该属性相同。
 	* Window.top //返回最顶层的父窗口。
 	* Window.parent //返回父窗口。
 
@@ -109,6 +113,8 @@ tags:
 	
 ##### `History`对象
 
+	* History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问。
+
 属性
 
 	* history.length //返回历史列表中的网址数
@@ -122,6 +128,8 @@ tags:
 ---
 
 ##### `Location`对象
+
+	* Location 对象是 window 对象的一部分，可通过 window.Location 属性对其进行访问。
 
 属性
 
@@ -137,9 +145,9 @@ tags:
 
 方法
 
-	* assign() //载入一个新的文档
-	* reload() //重新载入当前文档
-	* replace() //用新的文档替换当前文档	
+	* window.location.assign(URL) //载入一个新的文档
+	* window.location.reload() //重新载入当前文档
+	* window.location.replace(newURL) //用新的文档替换当前文档	
 
 ---	
 
