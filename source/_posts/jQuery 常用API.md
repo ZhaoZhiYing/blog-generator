@@ -34,6 +34,26 @@ tags:
 	* focus(function); focus() //当元素获得焦点时触发事件。
 	* blur(function); blur() //当元素失去焦点时触发事件。
 
+	* on(event,childSelector,data,function) //在被选元素及子元素上添加一个或多个事件处理程序。
+		event //由空格分隔多个事件值，也可以是数组。
+		childSelector //规定只能添加到指定的子元素上的事件处理程序
+		data //规定传递到函数的额外数据。
+		function //规定当事件发生时运行的函数。
+	* one() //同 on()，但只触发一次。
+	
+	//举例 on()
+	<script>
+		$(document).ready(function(){
+		  $("div").on("click","p",function(){
+		    $(this).slideToggle();
+		  });
+		  $("button").click(function(){
+		    $("<p>This is a new paragraph.</p>").insertAfter("button");
+		  });
+		});
+	</script>
+
+	
 ---
 
 #### `jQuery` 隐藏/显示	
