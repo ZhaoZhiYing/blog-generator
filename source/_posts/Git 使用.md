@@ -1,7 +1,7 @@
 ---
 title: Git 使用
 date: 2018-03-02 16:14:42
-categories: Git
+categories: 其他
 tags:
 ---
 
@@ -63,8 +63,7 @@ tags:
 #### `hexo`博客每次更改后都执行以下命令：
 	
 	hexo generate //生成
-	hexo deploy //部署	
-
+	hexo deploy //部署		
 
 #### `Git`常用命令速查表
 

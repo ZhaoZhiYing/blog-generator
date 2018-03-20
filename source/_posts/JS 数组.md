@@ -187,16 +187,12 @@ JS理解：数据就是原型链中有 `Array.prototype` 的对象。
 	
 ##### 5.`forEach()`
 
-同`map()`一样，但没有返回值。`forEach()`可以接受第二个参数，绑定参数函数的`this`变量。
+同`map()`一样，但没有返回值。
 
-	var foo = [];
-	
-	[1, 2, 3].forEach(function(ele,i){
-		this.push(ele * i)
-	}, foo)
-	
-	foo // [0, 2, 6] 
-
+	var foo = [1, 2, 3]
+	foo.forEach(function(ele,i){
+		console.log(ele * i)
+	})
               
 ##### 6.`filter()` 
  

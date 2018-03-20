@@ -43,6 +43,7 @@ console.log('C')
 * 同步回调。
 
 ```
+//定义一个函数 add
 function add(a, b, callback) {
     callback(a+b)
 }
@@ -55,7 +56,8 @@ add(1,2,function(result){
     console.log("结果是:" + result)
 })
 
-//result:3 结果是:3 
+//result:3 
+//结果是:3 
 ```
 * 异步回调。经常使用以下方法：
 	* 对于异步执行（例如读取文件和发出`HTTP`请求）
@@ -123,9 +125,21 @@ f1(f2)
 
 	new Promise(function(resolve, reject) /* executor */ )
 
-	// executor 是 resolve 和 reject 两个函数。
+	// executor 是 resolve 和 reject 两个函数。由 JavaScript 引擎提供。
 	// resolve 函数，在异步操作成功时调用，并将异步操作的结果，作为参数传递出去。
 	// reject 函数，在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。
+
+举例
+
+	let promise = new Promise(function(resolve, reject) {
+	  // ... some code
+	  if (/* 异步操作成功 */){
+	     resolve(value);
+	  } else {
+	     reject(error);
+	  }
+	});
+
 
 
 ##### `then`
@@ -134,13 +148,32 @@ f1(f2)
 	//第一个回调函数是 Promise 对象的状态变为 resolved 时调用。
 	//第二个回调函数是 Promise 对象的状态变为 rejected 时调用。
 
+举例
+
+	let promise = new Promise(function(resolve, reject) {
+	   // ... some code
+	}).then(function(value) {
+	   // success
+	}, function(error) {
+	   // failure
+	});
+
 
 ##### `catch`
-
-	// catch 是用于指定发生错误时的回调函数。
+	
+	// catch 是用于指定发生错误时的回调函数。效果和写在 then 的第二个参数里面一样。
 	//建议总是使用 catch，catch() 使回调报错时不会卡死 JS 而是会继续往下执行。
 	// Promise 对象的错误具有"冒泡"性质，会一直向后传递，直到被捕获为止。也就是说，错误总是会被下一个 catch 语句捕获。
 
+举例
+
+	let promise = new Promise(function(resolve, reject) {
+	   // ... some code
+	}).then(function(value) {
+	   // success
+	}).catch(function(error) {
+		// failure
+	})
   
 ---
 

@@ -101,7 +101,7 @@ console.log(window.message) // 1
 	//当点击 child 触发事件时，this 依然指向 grand
 	
 
-##### 在箭头函数中，`this`与封闭词法上下文的`this`保持一致。在全局代码中，它将被设置为全局对象。
+##### 在箭头函数中，`this`与父级上下文的`this`保持一致。在全局代码中，它将被设置为全局对象。
 
 	var name = 'tang' 
 	var foo ={

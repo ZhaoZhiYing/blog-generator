@@ -41,16 +41,18 @@ tags:
 
 方法
 
+	* Array.map(function(currentValue,index,arr), thisValue) //创建一个新数组，其结果是该数组中的每个元素(按照原始数组元素顺序)都调用一个提供的函数后返回的结果。
+	* Array.forEach(function(currentValue, index, arr), thisValue) //同 map() 一样，但没有返回值。
+		function(currentValue, index, arr) //必需参数。
+		currentValue //必需。当前元素。
+
 	* Array.join(分隔符) //以参数作为分隔符，将所有数组成员组成一个字符串返回。
 	* Array.concat(arr1,arr2...) //用于合并两个或多个数组。它将新数组的成员，添加到原数组成员的后部，返回一个新数组，原数组不变。
 	
-	* Array.map(方法函数) //创建一个新数组，其结果是该数组中的每个元素(按照原始数组元素顺序)都调用一个提供的函数后返回的结果。
-	* Array.forEach(方法函数) //同 map() 一样，但没有返回值。
+	* Array.filter(function) //用于过滤数组成员，满足条件的成员组成一个新数组返回。
+	* Array.reduce(function) //按原始顺序依次处理数组的每个成员，最终累计为一个值。
 	
-	* Array.filter(方法函数) //用于过滤数组成员，满足条件的成员组成一个新数组返回。
-	* Array.reduce(方法函数) //按原始顺序依次处理数组的每个成员，最终累计为一个值。
-	
-	* Array.sort(方法函数) //对数组成员进行排序。排序后，原数组将被改变。
+	* Array.sort(function) //对数组成员进行排序。排序后，原数组将被改变。
 	* Array.reverse() //用于颠倒数组中元素的顺序，返回改变后的数组。该方法会改变原数组。
 	
 	* Array.push(item1,item2...) //在数组的末端添加一个或多个元素，并返回添加新元素后的数组长度。该方法会改变原数组。
@@ -61,8 +63,8 @@ tags:
 	* Array.shift() //用于删除数组的第一个元素，并返回该元素。该方法会改变原数组。
 	* Array.splice(start, length, item1,item2...) //用于删除原数组的一部分成员，并可以在被删除的位置添加入新的数组成员，返回值是被删除的元素。该方法会改变原数组。
 	
-	* Array.some(方法函数) //用来判断数组成员是否符合某种条件。一项满足则整个返回 true 
-	* Array.every(方法函数) //用来判断数组成员是否符合某种条件。所有项满足则整个返回 true
+	* Array.some(function) //用来判断数组成员是否符合某种条件。一项满足则整个返回 true 
+	* Array.every(function) //用来判断数组成员是否符合某种条件。所有项满足则整个返回 true
 	
 	* Array.indexOf(item,start) //按原始顺序依次搜索数组中的元素，并返回它所在的位置。
 	

@@ -153,7 +153,8 @@ http://baidu.com:80 可以向 http://baidu.com:81 发 AJAX 请求吗 //no
 }else if(path === '/xxx'){
  response.statusCode = 200
  response.setHeader('Content-Type', 'text/XML')
- response.setHeader('Access-Control-Allow-Origin', 'http://frank.com:8001')//CORS
+ //CORS
+ response.setHeader('Access-Control-Allow-Origin', 'http://frank.com:8001')
  response.write(`
   {
      "note":{
