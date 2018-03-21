@@ -121,6 +121,7 @@ tags:
 	* String.toLowerCase() //把字符串转换为小写。
 	* String.toUpperCase() //把字符串转换为大写。
 	* String.charAt(index) //返回在指定位置的字符。
+		//如果没有提供索引，charAt() 将使用0。
 	
 	* String.indexOf(substring, start) //返回某个指定的字符串值在字符串中首次出现的位置。
 		//substring 要搜索的字符串值
@@ -177,6 +178,15 @@ tags:
 	* Math.round(x) //把数四舍五入为最接近的整数。
 	* Math.sqrt(x) //返回数的平方根。
 	* Math.pow(x,y) //返回 x 的 y 次幂。
+
+举例
+
+	Math.sqrt(4) // 2
+	Math.sqrt(-4) // 负值返回 NaN
+	
+	Math.pow(2,3) // 8
+	
+	
 
 [更多方法](http://www.runoob.com/jsref/jsref-obj-math.html)
 
