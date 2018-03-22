@@ -132,6 +132,5 @@ hexo deploy
 
 ----
 
-参考：[写代码啦] (https://xiedaimala.com/)
 	
 	

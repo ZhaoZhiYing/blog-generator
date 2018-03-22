@@ -375,4 +375,3 @@ tags:
 	node2.text('hi')//将所有`div`的`textContent`改为`hi`
 	
 ----
-参考：[写代码啦] (https://xiedaimala.com/)

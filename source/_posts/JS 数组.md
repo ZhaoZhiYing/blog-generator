@@ -4,6 +4,7 @@ date: 2018-02-20 17:13:10
 categories: JavaScript
 tags:
 ---
+
 #### 什么是数组
 人类理解：数组就是数据的有序集合（每个值的位置都有索引（从0开始））
 JS理解：数据就是原型链中有 `Array.prototype` 的对象。

@@ -217,9 +217,5 @@ tags:
 	Math.sqrt(-4) // 负值返回 NaN
 	
 	Math.pow(2,3) // 8
-	
-	
-
-[更多方法](http://www.runoob.com/jsref/jsref-obj-math.html)
 
 ---

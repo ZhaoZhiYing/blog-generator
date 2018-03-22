@@ -183,8 +183,6 @@ JS
 	* addEventListener() //允许在目标事件中注册监听事件(IE8 = attachEvent())	
 	* removeEventListener() //运行一次注册在事件目标上的监听事件(IE8 = detachEvent())
 
-更多参考：[菜鸟教程](http://www.runoob.com/jsref/dom-obj-event.html)
-
 ---	
 	
 

@@ -176,5 +176,3 @@ toString 专用于输出字符串。
 	
 ---	
 
-参考：[阮一峰-数据类型转换](http://javascript.ruanyifeng.com/grammar/conversion.html#toc2)
-

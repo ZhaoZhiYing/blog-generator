@@ -148,7 +148,6 @@ tags:
 	* window.location.assign(URL) //载入一个新的文档
 	* window.location.reload() //重新载入当前文档
 	* window.location.replace(newURL) //用新的文档替换当前文档	
-
 ---	
 
 

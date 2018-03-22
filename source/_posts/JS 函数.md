@@ -189,7 +189,4 @@ eval('var a = 1;')
 a // 1
 ```
 
--------
-
-
-参考：[写代码啦] (https://xiedaimala.com/)
+---

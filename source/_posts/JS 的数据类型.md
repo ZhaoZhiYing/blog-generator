@@ -206,8 +206,4 @@ obj instanceof Array //false
 	toString.call(1) // "[object Number]"
 	toString.call(Math) // "[object Math]"
 
--------
-
-参考：
-
-[写代码啦] (https://xiedaimala.com/)
+---

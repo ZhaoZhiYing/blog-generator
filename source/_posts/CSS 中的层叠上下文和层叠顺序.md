@@ -41,9 +41,3 @@ tags:
 此时，这个子元素为层叠上下文元素，不是 `flex` 父级元素。
 
 ----
-
-参考：
-
-[写代码啦](https://xiedaimala.com/)  
-
-[张鑫旭](http://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/)

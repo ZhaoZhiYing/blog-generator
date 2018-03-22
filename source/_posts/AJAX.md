@@ -314,4 +314,3 @@ window.jQuery = function(nodeOrSelector){
 
 ---
 
-参考：[写代码啦](https://xiedaimala.com/)

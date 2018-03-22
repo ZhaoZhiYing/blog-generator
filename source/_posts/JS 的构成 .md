@@ -37,9 +37,3 @@ tags:
 ```
 	
 ------
-
-参考：
-
-阮一峰的《JavaScript 标准参考教程》<http://javascript.ruanyifeng.com/introduction/history.html#toc1>
-
-MDN <https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Introduction>	

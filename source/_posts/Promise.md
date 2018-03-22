@@ -4,6 +4,7 @@ date: 2018-01-30 22:26:59
 categories: JavaScript
 tags:
 ---
+
 #### 「同步」和「异步」
 `JavaScript` 语言本身并不慢，慢的是读写外部数据，比如等待 `AJAX` 请求返回结果。这个时候，如果对方服务器迟迟没有响应，或者网络不通畅，就会导致脚本的长时间停滞。为了解决这个问题，`Javascript` 语言将任务的执行模式分成两种：「同步」（`Synchronous`）和「异步」（`Asynchronous`）。
 
@@ -176,9 +177,3 @@ f1(f2)
 	})
   
 ---
-
-参考：
-
-[阮一峰-Promise对象](http://javascript.ruanyifeng.com/advanced/promise.html#toc0)  
-
-[写代码啦](https://xiedaimala.com/)

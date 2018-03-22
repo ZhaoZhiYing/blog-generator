@@ -8,16 +8,36 @@ tags:
 #### 伪类
 `CSS`伪类是添加到选择器的关键字，指定要选择的元素的特殊状态。前缀是一个冒号`:`
 
-常用伪类
+##### 常用伪类
 
-	a:link {color: #ddd;} //未访问的链接
-	a:visited {color: #ddd;} //已访问的链接
-	a:hover {color: #ddd;} //鼠标划过链接
-	a:active {color: #ddd;} //已选中的链接
+	:link //向未访问的链接添加特殊的样式。
+	:visited //设置访问过的页面链接的样式
+	:active //设置当你点击链接时的样式。
+	:hover //当有鼠标悬停在其上的链接样式
+	:focus //用于选择具有焦点的元素。
 	
 	//这四个伪类同时使用链接时，需遵循 LVHA 顺序。
 	//即 link — :visited — :hover — :active。
 
+##### `CSS3` 新增伪类
+
+	:nth-child(n) //匹配父元素中的第 n 个子元素。
+	:last-child //匹配父元素中最后一个子元素。（如果匹配的 p，最后一个子元素是 div，就无法生效。）
+	:first-of-type //指定其父级的第一个元素。	:last-of-type //指定其父级的最后一个元素。
+	:empty //选择所有没有子元素的元素。
+	:not(selector) 选择器匹配每个元素是不是指定的元素/选择器。
+	:in-range //用于标签的值在指定区间值时显示的样式。
+	:out-of-range //用于标签的值在指定区间之外时显示的样式。
+	:read-only //用于选取设置了 "readonly" 属性的元素。
+	:read-write //用于匹配可读及可写的元素。
+	
+	input:checked //选择所有选中的表单元素（仅适用于单选按钮或复选框）。
+	input:enabled //选择所有启用的的元素（主要用于表单元素）。
+	input:disabled //选择所有禁用的的元素（主要用于表单元素）。
+	input:valid //选择所有输入值为合法的元素。
+	input:invalid //选择所有输入值为非法的元素。
+	input:optional //选择所有是可选项时的表单元素（没有设置 "required" 属性）。
+	...
 
 ---
 

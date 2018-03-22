@@ -65,14 +65,17 @@ tags:
 function Foo(name, city){
 	this.name = name;
 	this.city = city;
-	this.walk = function walk(){
-    	console.log('走一步的代码')
-	}
+	this.walk = walk;
+}
+
+function walk(){
+    console.log('走一步的代码')
 }
 	
 var human1 = new Foo({name:'zhao', city: 'beijing'})
 var human2 = new Foo({name:'zhao', city: 'beijing'})
 ```
+
 上面代码中，我们看到，与「工厂模式」的不同之处：
 
 	1. 没有显式地创建对象。

@@ -36,12 +36,7 @@ tags:
 	  Last name: <input type="text" name="lname"><br>
 	  <input type="submit" value="提交">
 	</form>
-
-><form action="demo_form.asp">
-	  First name: <input type="text" name="fname"><br>
-	  Last name: <input type="text" name="lname"><br>
-	  <input type="submit" value="提交">
-</form>
+	
 
 注意事项：
 
@@ -79,13 +74,20 @@ tags:
 		//value 属性对于 <input type="checkbox"> 和 <input type="radio"> 是必需的。
 		//value 属性不适用于 <input type="file">
 		
+
 	// HTML5 中的新属性
 	* autocomplete //规定 <input> 元素输入字段是否应该启用自动完成功能。
 	* autofocus //属性规定当页面加载时 <input> 元素应该自动获得焦点。
 	* form //规定 <input> 元素所属的一个或多个表单。
+	* required //规定必需在提交表单之前填写输入字段。
+	* placeholder //规定可描述输入 <input> 字段预期值的简短的提示信息 。
+	* multiple //规定允许用户输入到 <input> 元素的多个值。
+	* min //规定 <input> 元素的最小值。
+	* max //规定 <input> 元素的最大值。
+	* width //width 属性规定 <input> 元素的宽度。 (只针对type="image")
+	* height //规定 <input>元素的高度(只针对type="image")。
+	* step //规定 <input> 元素的合法数字间隔。
 	...
-
-[更多属性](http://www.runoob.com/tags/tag-input.html)	
 
 `type`属性值
 
@@ -137,14 +139,6 @@ tags:
 	  <input type="radio" name="sex" id="female">
 	  <input type="submit" value="提交">
 	</form>
-	
-><form action="demo_form.html">
-	  <label for="male">Male</label>
-	  <input type="radio" name="sex" id="male">
-	  <label for="female">Female</label>
-	  <input type="radio" name="sex" id="female">
-	  <input type="submit" value="提交">
-	</form>
 
 举例`form` 
 
@@ -155,16 +149,7 @@ tags:
 	  <input type="submit" value="提交">
 	</form>
 	
-	<label for="male" form="form1">Male</label>
-	
-><form action="demo_form.php" id="form1">
-  <input type="radio" name="sex" id="male">
-  <label for="female">Female</label>
-  <input type="radio" name="sex" id="female">
-  <input type="submit" value="提交">
-</form>	
-<label for="male" form="form1">Male</label>	
-	
+	<label for="male" form="form1">Male</label>		
 更聪明的写法：用`<label>` 标签包裹`<input>`标签，不需要`for`和`name`。 
 
 	<form action="demo_form.html">
@@ -176,17 +161,6 @@ tags:
 	    </label>
 	    <input type="submit" value="提交">
 	</form>
-	
-><form action="demo_form.html">
-  	<label>Male
-	  <input type="radio" name="sex">
-	</label>
-    <label>Female
-  	  <input type="radio" name="sex">
-    </label>
-    <input type="submit" value="提交">
-</form>	
-
 
 #### `<select>` `<option>` `<optgroup> `
 
@@ -207,18 +181,6 @@ tags:
 	    <option value="audi">Audi</option>
 	  </optgroup>
 	</select>
-	
-><select>
-  <optgroup label="Swedish Cars">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-  </optgroup>
-  <optgroup label="German Cars">
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-  </optgroup>
-</select>	
-
 
 #### `<textarea>`标签
 
@@ -227,10 +189,6 @@ tags:
 	<textarea rows="10" cols="30">
 	我是一个文本框。 
 	</textarea>
-
-><textarea rows="10" cols="30">
-我是一个文本框。 
-</textarea>
 
 ---
 
@@ -261,17 +219,6 @@ tags:
 			<td>$100</td>
 		</tr>
 	</table>
-
-><table border="1">
-	<tr>
-		<th>Month</th>
-		<th>Savings</th>
-	</tr>
-	<tr>
-		<td>January</td>
-		<td>$100</td>
-	</tr>
-</table>
 
 
 #### `<caption> `

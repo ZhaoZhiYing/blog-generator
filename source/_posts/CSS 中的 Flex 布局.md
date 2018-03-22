@@ -108,8 +108,3 @@ tags:
 	该属性可能取6个值，除了 auto，其他都与 align-items 属性完全一致。
 	
 ----
-参考：
-
-[写代码啦](https://xiedaimala.com/)
-
-[阮一峰 - Flex 布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)

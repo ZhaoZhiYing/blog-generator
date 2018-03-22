@@ -16,7 +16,7 @@ tags:
 	.name{}
 	//匹配所有类名为 name 的元素
 	
-##### ID选择器：
+##### `ID`选择器：
 	#name{}
 	//匹配所有 ID 名为 name 的元素
 	
@@ -55,13 +55,23 @@ tags:
 ##### 伪元素：
 	#header::before{}
 	//CSS3中的标准是伪元素使用双冒号“::”（避免和伪类混淆） 
+
+---
+
+#### 选择器优先级
 	
-#### CSS的继承、重要性
+	1. 内联样式（例如,style=""）。
+	2. ID 选择器（例如, #example）。
+	3. 类选择器(例如,.example)，属性选择器（例如, [type="radio"]），伪类（例如, :hover）。
+	4. 类型选择器（例如, h1）和 伪元素（例如, ::before）。
+
+---
+	
+#### `CSS`的继承、重要性
 
 ##### 继承
-如果后代元素没有定义样式，那么会继承祖先元素的样式。
 
-HTML
+如果后代元素没有定义样式，那么会继承祖先元素的样式。
 
 	<p>我是<span>谁</span></p>
 
@@ -74,18 +84,20 @@ HTML
 	可继承的样式： font-size font-family color, UL LI DL DD DT;
 	不可继承的样式：border padding margin width height ;
 	
-##### inherit 关键字
+##### `inherit` 关键字
+
 显式指定一个属性继承祖先元素的值，可用于继承性/非继承性属性。
 
 ##### 重要性`!important` 
+
 当在一个样式声明中加上`!important`时，此声明将覆盖任何其他声明。
    
 	p{color:red !important;}//这个会被应用
 	p{color:green;}
 	
->注意：应该尽量避免使用`!important`，因为这破坏了样式表中的固有的级联规则 使得调试找bug变得更加困难了。	
+>注意：应该尽量避免使用`!important`，因为这破坏了样式表中的固有的级联规则 使得调试找 `bug` 变得更加困难了。	
 
-
+---
 ￼
 
 	

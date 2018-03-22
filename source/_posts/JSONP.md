@@ -164,9 +164,3 @@ if (path === '/pay'){
 
 ---
 
-参考：
-
-[阮一峰 - 浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
-
-[写代码啦](https://xiedaimala.com/)
-

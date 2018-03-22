@@ -102,5 +102,4 @@ response.setHeader('Set-Cookie',`sessionId = ${sessionId}`)
 	1. Cookie 数据保存在客户端。Session 数据保存在服务器端。
 	2. 由于在 HTTP 请求中的 Cookie 是明文传递的，所以安全性成问题，用户能够篡改密码。所以一般情况，登录信息等重要信息存储在 Session 中，其他信息存储在 Cookie 中。 
 
-
 ---	
