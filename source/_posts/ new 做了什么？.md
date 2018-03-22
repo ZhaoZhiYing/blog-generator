@@ -30,6 +30,7 @@ tags:
 				console.log('走一步的代码')
 			}
 		}
+		
 ##### 转折点：「`Object`构造函数」和「对象字面量」都可以创建单个对象，但是这两个方法有个缺点，当使用同一个接口创建多个对象时，会产生大量的重复代码。于是，「工厂模式」应运而生。
 
 ---
@@ -38,12 +39,13 @@ tags:
 「工厂模式」是指用函数来封装以特定接口创建对象的细节。
 
 	function Foo(name, city){
-		this.name = name;
-		this.city = city;
-		this.walk = function walk(){
+		var person = new Object();
+		person.name = name;
+		person.city = city;
+		person.walk = function walk(){
 	    	console.log('走一步的代码')
 		}
-		return Foo
+		return person
 	}
 	
 	var human1 = Foo({name:'zhao', city: 'beijing'})
@@ -60,26 +62,27 @@ tags:
 * 此外，也可以创建自定义的构造函数，从而自定义对象类型的属性和方法。
 
 ```
-	function Foo(name, city){
-		this.name = name;
-		this.city = city;
-		this.walk = function walk(){
-	    	console.log('走一步的代码')
-		}
+function Foo(name, city){
+	this.name = name;
+	this.city = city;
+	this.walk = function walk(){
+    	console.log('走一步的代码')
 	}
+}
 	
-	var human1 = new Foo({name:'zhao', city: 'beijing'})
-	var human2 = new Foo({name:'zhao', city: 'beijing'})
+var human1 = new Foo({name:'zhao', city: 'beijing'})
+var human2 = new Foo({name:'zhao', city: 'beijing'})
 ```
 上面代码中，我们看到，与「工厂模式」的不同之处：
 
-1. 没有显式地创建对象
-2. 	直接将属性和方法赋给了`this`对象
-3. 没有`return`语句
-4. 函数名首字母是大写`F`。按照惯例，构造函数始终以大写字母开头，主要是为了区别其他函数。
-5. 用了`new`操作符创建新实例。
+	1. 没有显式地创建对象。
+	2. 直接将属性和方法赋给了 this 对象。
+	3. 没有 return 语句。
+	4. 函数名首字母是大写 F 。按照惯例，构造函数始终以大写字母开头，主要是为了区别其他函数。
+	5. 用了 new 操作符创建新实例。
 
 #### 重点来了，`new`在这里到底干了些什么？
+
 要创建构造函数的新实例，必须使用 `new` 操作符。以这种方式调用构造函数会经历以下步骤：
 
 1.创建一个新对象，这个对象的类型是`object`

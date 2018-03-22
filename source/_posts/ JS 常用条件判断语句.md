@@ -36,16 +36,15 @@ tags:
 	<button>3</button>
 	<button>4</button>
 	
-```	
-<script> 
-	var btn = document.getElementsByTagName('button');
-	for(var i=0; i<btn.length; i++){ 
-	    btn[i].onclick=function(){ 
-	        console.log(i);
-	    }
-	}
-</script>
-```	
+	<script> 
+		var btn = document.getElementsByTagName('button');
+		for(var i=0; i<btn.length; i++){ 
+		    btn[i].onclick=function(){ 
+		        console.log(i);
+		    }
+		}
+	</script>
+
 	
 现在换一种写法，下面例子中，依次点击按钮，会打印 0 1 2 3 4 。
 
