@@ -4,7 +4,10 @@ date: 2018-01-01 16:44:38
 categories: JavaScript
 tags:
 ---
+
+
 #### `getSiblings`获取一个节点的所有兄弟节点
+
 	<ul>
 	  <li id="item1">选项1</li>
 	  <li id="item2">选项2</li>
