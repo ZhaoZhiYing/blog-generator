@@ -1,12 +1,12 @@
 ---
-title: 实现一个 jQuery 的 API
+title: 使用原生 JS 实现 jQuery 的 API
 date: 2018-01-01 16:44:38
 categories: JavaScript
 tags:
 ---
 
 
-#### `getSiblings`获取一个节点的所有兄弟节点
+#### `siblings()` 获取一个节点的所有兄弟节点。
 
 	<ul>
 	  <li id="item1">选项1</li>
@@ -47,7 +47,7 @@ tags:
 	getSiblings(item3)//调用
 		
 
-#### `addClass`为元素添加指定的样式类名
+#### `addClass()` 为元素添加指定的样式类名。
 
 	item3.classList.add('a')
 	item3.classList.add('b')
@@ -102,7 +102,7 @@ tags:
 	}	
 	addClass(item3,['a','b','c'])//调用
 		
-上面两个 API 的弊端：如果有人已经定义过getSiblings ，会被这次覆盖。而且不方便调用。运用 **命名空间** 能解决这个问题。
+**上面两个 `API` 的弊端：**如果有人已经定义过 `Siblings()` ，会被这次覆盖。而且不方便调用。运用命名空间能解决这个问题。
 
 	window.zzdom = {} //声明变量名 zzdom
 	zzdom.getSiblings = getSiblings 
@@ -139,7 +139,7 @@ tags:
 	item3.getSiblings(item3)
 	item3.addClass(item3,['a','b','c'])
 	
-解决办法：更改`Node`原型
+**解决办法：**更改`Node`原型
 
 	Node.prototype.getSiblings = function (){ 
 		var allChildren = this.parentNode.children 
@@ -163,7 +163,7 @@ tags:
 
 > 注意：`this`是调用函数时的第一个参数。
 
-上面代码弊端：如果之前声明过`getSiblings`和`addClass`，会被这次声明覆盖。
+**上面代码弊端：**如果之前声明过 `getSiblings` 和 `addClass`，会被这次声明覆盖。
 那么不更改原型，解决办法如下：
 
 	window.jQuery = function (node){
@@ -189,7 +189,7 @@ tags:
 	node2.getSiblings()
 	node2.addClass(['a','b','c'])
 	
-增加类型检测：字符串`string`或选择器`selector`
+**增加类型检测：**字符串 `string` 或选择器 `selector`
 
 	window.jQuery = function (nodeOrSelector){
 		let node
@@ -221,7 +221,7 @@ tags:
 	node2.getSiblings()
 	node2.addClass(['a','b','c'])
 	
-#### `addClass`操作多个节点
+#### `addClass()` 操作多个节点
 	
 	window.jQuery = function (nodeOrSelector){
 		let nodes = {}
@@ -290,9 +290,9 @@ tags:
 	}	
 	//调用
 	var node2 = jQuery('ul > li')
-	node2.addClass(['red'])//将所有`div`的`class`添加一个`red`
+	node2.addClass(['red']) //将所有 div 的 class 添加一个 red
 
-#### 添加`setText`
+#### `text()` 设置或返回被选元素的文本内容。
 
 	window.jQuery = function (nodeOrSelector){
 		let nodes = {}
@@ -315,7 +315,7 @@ tags:
 				}
 			})
 		}	
-		//`getText`获取文本
+		// getText 获取文本
 		nodes.getText = function(){
 			var texts = []
 			for(let i=0; i<nodes.length; i++){
@@ -323,7 +323,7 @@ tags:
 			}
 			return texts
 		}	
-		//`setText`设置文本
+		// setText 设置文本
 		nodes.setText = function(text){
 			for(let i=0;i<nodes.length; i++){
 				nodes[i].textContent = text
@@ -332,8 +332,8 @@ tags:
 		return nodes
 	}	
 	var node2 = jQuery('ul > li')
-	node2.addClass(['red'])//将所有`div`的`class`添加一个`red`
-	node2.setText('hi')//将所有`div`的`textContent`改为`hi`
+	node2.addClass(['red']) //将所有 div 的 class 添加一个 red 
+	node2.setText('hi') //将所有 div 的 textContent 改为 hi 
 
 但是，对于`jQuery`来说，非常讨厌写`set`和`get`。更改如下：
 
@@ -374,7 +374,7 @@ tags:
 		return nodes
 	}	
 	var node2 = jQuery('ul > li')
-	node2.addClass(['red'])//将所有`div`的`class`添加一个`red`
-	node2.text('hi')//将所有`div`的`textContent`改为`hi`
+	node2.addClass(['red']) //将所有 div 的 class 添加一个 red 
+	node2.text('hi') //将所有 div 的 textContent 改为 hi 
 	
 ----
