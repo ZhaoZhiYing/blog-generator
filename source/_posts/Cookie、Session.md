@@ -44,17 +44,14 @@ tags:
 
 `Session` 是在无状态的 `HTTP` 协议下，服务端记录用户状态时用于标识具体用户的机制。
 
-* `Session`解决了`Cookie`的安全性问题。
-* `Session`是服务器上的`hash表`。
+	1. 服务器通过 cookie 给用户一个 sessionId (随机数)。
+	2. 服务器有一块内存（哈希表）保存了所有的 session 。 
+	3. 每次用户访问服务器的时候，服务器通过 sessionId 去读取对应的 session，得到用户的隐私信息，比如 id email 。
 
+##### `Session`的作用
 
-##### `Session`的用法
-
-```
-1. 服务器通过 cookie 给用户一个 sessionId (随机数)。
-2. 服务器有一块内存（哈希表）保存了所有的 session 。 
-3. 每次用户访问服务器的时候，服务器通过 sessionId 去读取对应的 session，得到用户的隐私信息，比如 id email 。
-```
+	* Session 解决了 Cookie 的安全性问题。
+	* Session 是服务器上的 hash表 。	
 
 举例`server.js`
 

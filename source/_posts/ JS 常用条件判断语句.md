@@ -1,7 +1,7 @@
 ---
 title: JS 常用条件判断语句
 date: 2018-03-20 16:42:38
-categories:
+categories: JavaScript
 tags:
 ---
 
@@ -119,7 +119,7 @@ tags:
 	condition ? expr1 : expr2 
 
 ```
-* condition 计算结果为true或false的表达式。
+* condition 计算结果为 true 或 false 的表达式。
 * 如果条件值为真值（true），运算符就会返回 expr1 的值。
 * 否则，就会返回 expr2 的值。	
 * expr1, expr2 值可以是任何类型的表达式。
