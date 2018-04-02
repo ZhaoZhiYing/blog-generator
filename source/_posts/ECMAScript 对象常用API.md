@@ -14,7 +14,8 @@ tags:
 
 方法
 	
-	* Object.assign() //通过复制一个或多个对象来创建一个新的对象。
+	* Object.assign(新对象, 源对象) //通过复制一个或多个对象来创建一个新对象。
+	
 	* Object.create() //使用指定的原型对象和属性创建一个新对象。
 	* Object.defineProperty() //给对象添加一个属性并指定该属性的配置。
 	* Object.defineProperties() //给对象添加多个属性并分别指定它们的配置。
@@ -52,14 +53,17 @@ tags:
 	* encodeURI(string) //把字符串编码为 URI。
 	* encodeURIComponent(string) //把字符串编码为 URI 组件。
 	* escape(string) //对字符串进行编码。
-	* eval(string) //计算 JavaScript 字符串，并把它作为脚本代码来执行。
-	//如果参数是一个表达式，eval() 函数将执行表达式。如果参数是Javascript语句，eval()将执行 Javascript 语句。
 	* isFinite(value) //检查某个值是否为有穷大的数。
 	* isNaN(value) //检查某个值是否是数字。
 	* parseFloat(string,radix) //解析一个字符串并返回一个浮点数。
 	* parseInt(string) //解析一个字符串并返回一个整数。
 	* Number(object) //把对象的值转换为数字。
 	* String(object) //把对象的值转换为字符串。
+	* eval(string) //将传入的字符串当做 JavaScript 代码进行执行。
+	
+	举例 
+		eval('var a = 1;')
+		a // 1
 
 ---
 
@@ -98,7 +102,7 @@ tags:
 	* Array.some(function) //用来判断数组成员是否符合某种条件。一项满足则整个返回 true 
 	* Array.every(function) //用来判断数组成员是否符合某种条件。所有项满足则整个返回 true
 	
-	* Array.indexOf(item,start) //按原始顺序依次搜索数组中的元素，并返回它所在的位置。
+	* Array.indexOf(item,start) //按原始顺序依次搜索数组中的元素，并返回它所在的位置。如果在数组中没找到字符串则返回 -1。
 	
 	* Array.valueOf() //返回数组对象的原始值。
 	* Array.toString() //把数组转换为字符串，并返回结果。
@@ -155,7 +159,7 @@ tags:
 	* String.charAt(index) //返回在指定位置的字符。
 		//如果没有提供索引，charAt() 将使用0。
 	
-	* String.indexOf(substring, start) //返回某个指定的字符串值在字符串中首次出现的位置。
+	* String.indexOf(substring, start) //返回某个指定的字符串值在字符串中首次出现的位置。没有找到匹配的字符串则返回 -1。
 		//substring 要搜索的字符串值
 		//start 可选参数，开始搜索的位置。
 	

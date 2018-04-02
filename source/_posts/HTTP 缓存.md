@@ -6,7 +6,7 @@ tags:
 ---
 
 
-#### `Cache-Control`
+### `Cache-Control`
 
 `Cache-Control`通用消息头被用于在 `HTTP` 请求和响应中通过指定指令来实现缓存机制。
 
@@ -27,7 +27,7 @@ tags:
 
 ---
 
-#### `Expire`
+### `Expire`
 
 ##### `Expire` 和 `Cache-Control` 区别?
 
@@ -72,7 +72,9 @@ tags:
 
 如果`ETag`的值不匹配，这就意味着资源很可能发生了变化，那么，一个完整的响应就会被返回。
 
-#### `last-Modified`
+---
+
+### `last-Modified`
 
 **由于精确度比 `ETag` 要低，所以这是一个备用机制。**
 

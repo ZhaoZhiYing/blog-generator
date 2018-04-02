@@ -262,14 +262,5 @@ tags:
 	* get() //使用 AJAX 的 HTTP GET 请求从服务器加载数据。	* post() //使用 AJAX 的 HTTP POST 请求从服务器加载数据。
 
 ---
-
-
-
-
-
-
-
-
-	
 	
 	

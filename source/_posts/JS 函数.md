@@ -114,8 +114,9 @@ tags:
 -------
 
 #### `return`
-* 每个函数都有`return`。
-* 如果你不写`return`，就相当于写了`return undefined`。
+
+	* 每个函数都有 return 。
+	* 如果你不写 return ，就相当于写了 return undefined 。
 
 作用：返回一个值给函数，并且结束函数执行。
 
@@ -136,6 +137,7 @@ tags:
 -------
 
 #### 递归
+
 递归函数是一个直接或间接调用函数自身的嵌套型函数。
 
 	function fn(num){
@@ -172,21 +174,5 @@ tags:
 	}
 	var foo1 = add.bind(add, 5,3)
 	foo1() //8
-	var foo1 = add.bind(add, 5,3) 
-	foo1() //8
  
-   
--------
-
-##### `eval()`
- * `eval()`函数会将传入的字符串当做`JavaScript`代码进行执行。
- * 语法：`eval(string)`
- * 如果字符串表示的是表达式，`eval()`会对表达式进行求值。
- * 如果参数表示一个或多个`JavaScript语句`， 那么`eval()`就会执行这些语句。
- 
-```
-eval('var a = 1;')
-a // 1
-```
-
----
+---   

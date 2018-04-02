@@ -36,7 +36,6 @@ tags:
 如何使用原生`JS`来发送`AJAX`请求？（`XMLHttpRequest`）
 
 ```
-//前端代码
 myButton.addEventListener('click', (e)=>{
  let request = new XMLHttpRequest()
  request.onreadystatechange = () =>{ 
@@ -54,85 +53,13 @@ myButton.addEventListener('click', (e)=>{
 })
 ```
 	
-```	    
-// 后端代码（XML）
-}else if(path === '/xxx'){
- response.statusCode = 200
- response.setHeader('Content-Type', 'text/XML')
- response.write(`
-<note>
-  <to>糖糖</to>
-  <from>照照</from>
-   <heading>hellow你好吗</heading>
-   <body>hellow你好吗衷心感谢珍重再见期待再相逢</body>
- </note>
- `)
- response.end()
-}
-```
-	
-```   
-// 后端代码（JSON）
-}else if(path === '/xxx'){
- response.statusCode = 200
- response.setHeader('Content-Type', 'text/XML')
- response.write(`
-  {
-     "note":{
-        "to": "糖糖",
-        "from": "照照",
-        "heading": "哈喽",
-        "content": "你好吗"
-      }
-    }
- `)
- response.end()
-}
-```
-	
 `readyState`的五种状态，重点记住`4`
 
 <img src='https://i.loli.net/2018/01/29/5a6eeb46a0ca4.png
 '>
 
-##### `XML`
-* 曾有一段时间，`XML`是互联网上传输结构化数据的事实标准。
-
-* 但是`XML`过于烦琐、冗长。为解决这个问题，涌现了一些方案。直到 2006年，`Douglas Crockford` 提出了 `JSON` 语言。
-
 ---
 
-#### `JSON`
-`JSON`是`JavaScript Object Notation`的简称，它是一种表示结构化数据的格式。相比`XML`，`JSON`是在`JavaScript`中读写结构化数据的更好的方式。主要是因为`JSON`更加简洁。
-
-##### `JSON` 与 `JavaScript` 的关系
-`JSON` 和`JavaScript`是两种不同的语法，`JSON`参考了`JavaScript`。
-
-##### `JSON` 与 `JavaScript` 的区别
-1.`JSON`没有`function`和`undefined`。<br/>
-2.`JSON`字符串首尾必须使用双引号。<br/>
-
-```
-"Hello world"
-```
-3.与`JavaScript`的对象字面量相比，`JSON`对象有两处不同：<br/>
-
-* `JSON`没有变量的概念，一个对象以`{`开始并以`}`结束。并且没有末尾的分号。
-* `JSON`中对象的属性名必须加双引号。
-	
-```
-{"name": "zhao", "age": 18}
-```
-
-4.`JSON`的数组也没有变量和分号，一个数组以`[`开始并以`]`结束。
-
-```
-["name", 18, true]
-```
-
-5.`JSON`中没有原型链。
-
----
 #### 同源策略与`CORS`跨域
 ##### 同源策略
 只有 协议+端口+域名 一模一样才允许发 `AJAX` 请求，如下：
@@ -264,7 +191,7 @@ window.jQuery.ajax({
 })
 ```
 
-##### `promise`
+##### `promise` 改写
 
 ```
 window.jQuery = function(nodeOrSelector){

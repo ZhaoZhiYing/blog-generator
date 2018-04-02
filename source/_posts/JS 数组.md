@@ -104,10 +104,11 @@ JS理解：数据就是原型链中有 `Array.prototype` 的对象。
 ---
 
 #### 伪数组（类数组）
-* 有 0,1,2,3,4,5...n,length 这些 key 的对象
-* 原型链中没有 `Array.prototype`。或者说没有 `push` 方法。
 
-比如函数的`argument`参数，还有像调用`getElementsByTagName` `document.childNodes`之类的，它们都返回`NodeList`对象都属于伪数组。
+	* 有 0,1,2,3,4,5...n,length 这些 key 的对象。
+	* 原型链中没有 Array.prototype 。或者说没有 push 等方法。
+
+	* 比如函数的 argument 参数
 
 伪数组转成真数组方法 
     
@@ -239,7 +240,8 @@ JS理解：数据就是原型链中有 `Array.prototype` 的对象。
 	a = [1, 2, 3, 4, 5, 6]
 	a.reduce(function(arr, n){
 		if(n % 2 === 0){
-			arr.push(n) 		}
+			arr.push(n)
+		}
 		return arr	
 	},[]) 
 	// [2, 4, 6]
@@ -327,7 +329,7 @@ JS理解：数据就是原型链中有 `Array.prototype` 的对象。
 
 ##### 15.`indexOf()` `lastIndexOf()`
 
-按原始顺序搜索数组中的元素，并返回它所在的位置。
+按原始顺序搜索数组中的元素，并返回它所在的位置。如果在数组中没找到字符串则返回 -1。
 
 两个参数：第一个参数表示要搜索的元素；第二个参数表示搜索的开始位置。
 

@@ -18,21 +18,21 @@ tags:
 
 所谓"同源"指的是"三个相同"：
 
-* 协议相同
-* 域名相同
-* 端口相同
+	* 协议相同
+	* 域名相同
+	* 端口相同
 
 如果非同源，共有三种行为受到限制。
 
-* `Cookie` `LocalStorage` 和 `IndexDB` 无法读取。
-* `DOM` 无法获得。
-* `AJAX` 请求不能发送。
+	* Cookie LocalStorage 和 IndexDB 无法读取。
+	* DOM 无法获得。
+	* AJAX 请求不能发送。
 
 同源政策规定，`AJAX`请求只能发给同源的网址，否则就报错。有三种方法规避这个限制。
 
-* `JSONP`
-* `WebSocket`
-* `CORS`
+	* JSONP
+	* WebSocket
+	* CORS
 
 这里，我们主要讲 `JSONP`。
 
