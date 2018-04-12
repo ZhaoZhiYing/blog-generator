@@ -122,7 +122,7 @@ JSON.parse('null');            // null
 	
 #### `JSON.stringify()`
 
-`JSON.stringify()` 用于将 `JavaScript` 值转换为 `JSON` 字符串。
+`JSON.stringify()` 将一个 `JavaScript` 值(对象或者数组)转换为一个 `JSON`字符串。
  
 语法
 
@@ -140,6 +140,17 @@ JSON.stringify([1,"false",false]);      // '[1,"false",false]'
 JSON.stringify({ x: 5 });               // '{"x":5}'
 ```
  
- 
+##### `toJSON` 方法
+
+如果一个被序列化的对象拥有 `toJSON` 方法，那么该 `toJSON` 方法就会覆盖该对象默认的序列化行为：不是那个对象被序列化，而是调用 `toJSON` 方法后的返回值会被序列化，例如：
+
+	var obj = {
+	  foo: 'foo',
+	  toJSON: function () {
+	    return 'bar';
+	  }
+	};
+	JSON.stringify(obj);      // '"bar"'
+	JSON.stringify({x: obj}); // '{"x":"bar"}'
 	
 ---	

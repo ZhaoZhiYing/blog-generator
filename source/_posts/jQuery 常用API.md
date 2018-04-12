@@ -122,9 +122,7 @@ tags:
 
 	* text() //设置或返回被选元素的文本内容。
 	* html() //设置或返回被选元素的内容（innerHTML）。
-	* val() //返回 value 属性的值。
-	* val(value) //设置 value 属性的值。
-	* val(function(index,currentvalue)) //设置或返回被选元素的 value 属性。
+	* val() //返回或设置 value 属性的值。
 	* attr() //设置或返回被选元素的属性和值。
 
 	//举例 val()
@@ -208,9 +206,10 @@ tags:
 #### `jQuery` 遍历 
 
 祖先
-
-	* parent(filter) //返回被选元素的直接父元素。
-	* parents() //返回被选元素的所有祖先元素。
+	
+	* closest(filter,context) //返回被选元素的第一个祖先元素。直到找到与所提供的选择器匹配的为止。
+	* parent(filter) //返回被选元素的直接父元素。该方法只沿着 DOM 树向上遍历单一层级。
+	* parents(filter) //返回被选元素的所有祖先元素。
 	* parentsUntil(stop,filter) //返回介于 selector 与 stop 之间的所有祖先元素。
 	
 	//举例
@@ -224,9 +223,8 @@ tags:
 
 后代
 
-	* children() //返回被选元素的所有直接子元素。
-	* find(function(currentValue, index, arr),thisValue) //返回被选元素的后代元素。	
-	
+	* children(filter) //返回被选元素的所有直接子元素。
+	* find(filter) //返回被选元素的后代元素。	
 	//举例
 	<ul class="level-1">
 	  <li class="item-i">II
@@ -244,9 +242,9 @@ tags:
 
 同胞 `siblings`
 
-	* siblings() //返回被选元素的所有同级元素。
-	* next() //返回被选元素的后一个同级元素。
-	* nextAll() //返回被选元素之后的所有同级元素。
+	* siblings(filter) //返回被选元素的所有同级元素。
+	* next(filter) //返回被选元素的后一个同级元素。
+	* nextAll(filter) //返回被选元素之后的所有同级元素。
 	* nextUntil(stop,filter) //返回 selector 与 stop 之间的每个元素之后的所有同级元素。
 
 ---

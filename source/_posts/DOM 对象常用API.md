@@ -182,12 +182,13 @@ tags:
 	* Element.scrollWidth //返回元素节点的总宽度。
 	* Element.scrollLeft //返回元素节点的水平滚动条向右滚动的像素数值,通过设置这个属性可以改变元素的滚动位置。
 	* Element.scrollTop //返回元素节点的垂直滚动向下滚动的像素数值。
+	
 	* Element.offsetHeight //返回元素的垂直高度(包含border,padding)。
 		//offsetheight = padding + height + border + 横向滚动轴高度。
 	* Element.offsetWidth //返回元素的水平宽度(包含 border,padding)。
-	* Element.offsetLeft //返回当前元素左上角相对于  HTMLElement.offsetParent 节点的左边界偏移的像素值。	* Element.offsetParent //节点的垂直偏移。
-	* Element.offsetTop //返回水平位移。
-	* Element.style //返回元素节点的行内样式。
+	* Element.offsetParent //返回一个指向最近的（closest，指包含层级上的最近）包含该元素的定位元素。
+	* Element.offsetLeft //返回当前元素左上角相对于  HTMLElement.offsetParent 节点的左边界偏移的像素值。	* Element.offsetTop //返回当前元素相对于其 offsetParent 元素的顶部的距离。
+	
 	
 	//节点相关属性
 	* Element.children //包括当前元素节点的所有子元素。
@@ -212,7 +213,8 @@ tags:
 	* Element.scrollIntoView() //滚动当前元素，进入浏览器的可见区域。
 	
 	//属性方法
-	* Element.getAttribute() //读取指定属性。  
+	* Element.getAttribute(attributename) //读取指定属性。
+		attributename //String	必须。你想获取的属性值。  
 	* Element.setAttribute() //设置指定属性。  
 	* Element.hasAttribute() //返回一个布尔值，表示当前元素节点是否有指定的属性。  
 	* Element.removeAttribute() //移除指定属性。

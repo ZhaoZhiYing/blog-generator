@@ -5,6 +5,7 @@ categories: HTML
 tags:
 ---
 
+**注意：** `HTML` 标签名和属性名不能用大写。
 
 在 `CSS` 中，`HTML` 中的标签元素大概被分为三种类型：
 

@@ -15,25 +15,19 @@ tags:
 方法
 	
 	* Object.assign(新对象, 源对象) //通过复制一个或多个对象来创建一个新对象。
+	* Object.create(proto) //使用指定的原型对象和属性创建一个新对象。
 	
-	* Object.create() //使用指定的原型对象和属性创建一个新对象。
-	* Object.defineProperty() //给对象添加一个属性并指定该属性的配置。
-	* Object.defineProperties() //给对象添加多个属性并分别指定它们的配置。
-	* Object.entries() //返回给定对象自身可枚举属性的[key, value]数组。
-	* Object.freeze() //冻结对象：其他代码不能删除或更改任何属性。
-	* Object.getOwnPropertyDescriptor() //返回对象指定的属性配置。
-	* Object.getOwnPropertyNames() //返回一个数组，它包含了指定对象所有的可枚举或不可枚举的属性名。
-	* Object.getOwnPropertySymbols() //返回一个数组，它包含了指定对象自身所有的符号属性。
-	* Object.getPrototypeOf() //返回指定对象的原型对象。
-	* Object.is() //比较两个值是否相同。所有 NaN 值都相等（这与==和===不同）。
-	* Object.isExtensible() //判断对象是否可扩展。
-	* Object.isFrozen() //判断对象是否已经冻结。
-	* Object.isSealed() //判断对象是否已经密封。
-	* Object.keys() //返回一个包含所有给定对象自身可枚举属性名称的数组。
-	* Object.preventExtensions() //防止对象的任何扩展。
-	* Object.seal() //防止其他代码删除对象的属性。
-	* Object.setPrototypeOf() //设置对象的原型（即内部[[Prototype]]属性）。
-	* Object.values() //返回给定对象自身可枚举值的数组。
+	* Object.entries(obj) //返回给定对象自身可枚举属性的[key, value]数组。
+	* Object.getPrototypeOf(obj) //返回指定对象的原型对象。
+	
+	* Object.freeze(obj) //冻结对象：其他代码不能删除或更改任何属性。
+	* Object.seal(obj) //防止其他代码删除对象的属性。
+	
+	* Object.is(value1, value2) //比较两个值是否相同。所有 NaN 值都相等（这与==和===不同）。
+	
+	* Object.keys(obj) //返回一个包含所有给定对象自身可枚举属性名称的数组。
+	* Object.values(obj) //返回给定对象自身可枚举值的数组。
+	
 
 
 ---
@@ -55,8 +49,9 @@ tags:
 	* escape(string) //对字符串进行编码。
 	* isFinite(value) //检查某个值是否为有穷大的数。
 	* isNaN(value) //检查某个值是否是数字。
-	* parseFloat(string,radix) //解析一个字符串并返回一个浮点数。
-	* parseInt(string) //解析一个字符串并返回一个整数。
+	* parseFloat(string) //解析一个字符串并返回一个浮点数。只解析十进制数。
+	* parseInt(string,radix) //解析一个字符串并返回一个整数。
+		parseInt('123', 5) // 返回38 => 1*5^2 + 2*5^1 + 3*5^0 = 38
 	* Number(object) //把对象的值转换为数字。
 	* String(object) //把对象的值转换为字符串。
 	* eval(string) //将传入的字符串当做 JavaScript 代码进行执行。
@@ -77,16 +72,16 @@ tags:
 
 方法
 
-	* Array.map(function(currentValue,index,arr), thisValue) //创建一个新数组，其结果是该数组中的每个元素(按照原始数组元素顺序)都调用一个提供的函数后返回的结果。
+	* Array.map(function(currentValue, index, arr), thisValue) //创建一个新数组，其结果是该数组中的每个元素(按照原始数组元素顺序)都调用一个提供的函数后返回的结果。
 	* Array.forEach(function(currentValue, index, arr), thisValue) //同 map() 一样，但没有返回值。
 		function(currentValue, index, arr) //必需参数。
-		currentValue //必需。当前元素。
+		currentValue //必需。当前位置的值。
 
-	* Array.join(分隔符) //以参数作为分隔符，将所有数组成员组成一个字符串返回。
+	* Array.join('分隔符') //以参数作为分隔符，将所有数组成员组成一个字符串返回。
 	* Array.concat(arr1,arr2...) //用于合并两个或多个数组。它将新数组的成员，添加到原数组成员的后部，返回一个新数组，原数组不变。
 	
 	* Array.filter(function) //用于过滤数组成员，满足条件的成员组成一个新数组返回。
-	* Array.reduce(function) //按原始顺序依次处理数组的每个成员，最终累计为一个值。
+	* Array.reduce(function(之前的结果, 当前变量),当前的初值) //按原始顺序依次处理数组的每个成员，最终累计为一个值。
 	
 	* Array.sort(function) //对数组成员进行排序。排序后，原数组将被改变。
 	* Array.reverse() //用于颠倒数组中元素的顺序，返回改变后的数组。该方法会改变原数组。
@@ -94,7 +89,7 @@ tags:
 	* Array.push(item1,item2...) //在数组的末端添加一个或多个元素，并返回添加新元素后的数组长度。该方法会改变原数组。
 	* Array.unshift(item1,item2...) //用于在数组的第一个位置添加一个或多个元素，并返回添加新元素后的数组长度。该方法会改变原数组。
 	
-	* Array.slice(start,end) //用于提取原数组的一部分，返回一个新数组，原数组不变。
+	* Array.slice(start, end) //用于提取原数组的一部分，返回一个新数组，原数组不变。
 	* Array.pop() //用于删除数组的最后一个元素，并返回该元素。该方法会改变原数组。
 	* Array.shift() //用于删除数组的第一个元素，并返回该元素。该方法会改变原数组。
 	* Array.splice(start, length, item1,item2...) //用于删除原数组的一部分成员，并可以在被删除的位置添加入新的数组成员，返回值是被删除的元素。该方法会改变原数组。
@@ -102,7 +97,7 @@ tags:
 	* Array.some(function) //用来判断数组成员是否符合某种条件。一项满足则整个返回 true 
 	* Array.every(function) //用来判断数组成员是否符合某种条件。所有项满足则整个返回 true
 	
-	* Array.indexOf(item,start) //按原始顺序依次搜索数组中的元素，并返回它所在的位置。如果在数组中没找到字符串则返回 -1。
+	* Array.indexOf(item, start) //按原始顺序依次搜索数组中的元素，并返回它所在的位置。如果在数组中没找到字符串则返回 -1。
 	
 	* Array.valueOf() //返回数组对象的原始值。
 	* Array.toString() //把数组转换为字符串，并返回结果。
@@ -156,9 +151,10 @@ tags:
 
 	* String.toLowerCase() //把字符串转换为小写。
 	* String.toUpperCase() //把字符串转换为大写。
+	
 	* String.charAt(index) //返回在指定位置的字符。
 		//如果没有提供索引，charAt() 将使用0。
-	
+		
 	* String.indexOf(substring, start) //返回某个指定的字符串值在字符串中首次出现的位置。没有找到匹配的字符串则返回 -1。
 		//substring 要搜索的字符串值
 		//start 可选参数，开始搜索的位置。
@@ -170,13 +166,17 @@ tags:
 	* substring(start,end) //提取字符串中两个指定的索引号之间的字符（不包括 end 的字符）。
 	* substr(start,length) //从起始索引号提取字符串中指定数目的字符。
 
+	* String.match(regexp) //检索字符串 String Object，以找到一个或多个与 regexp 匹配的文本。
+	
+	* String.replace(searchvalue,newvalue) //用于在字符串中用一些字符替换另一些字符 
+	
 ---
 
 #### `Boolean`
 
 属性
 
-	* constructor	 //返回对创建此对象的 Boolean 函数的引用
+	* constructor //返回对创建此对象的 Boolean 函数的引用
 	* prototype //表示 Boolean 构造函数的原型，并允许您向所有 Boolean 对象添加新的属性和方法。
 	
 方法
