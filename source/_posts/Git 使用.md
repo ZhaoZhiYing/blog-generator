@@ -64,9 +64,11 @@ tags:
 
 ##### 回退到某个版本，只保留源码
 
-	git reset –mixed <commit_id>
+	git reset –-mixed <commit_id>
 	
 ##### 只回退 `commit` 信息	
+
+	git reset –-soft <commit_id>
 
 ---
 

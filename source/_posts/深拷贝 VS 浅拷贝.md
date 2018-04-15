@@ -57,7 +57,7 @@ tags:
 			object2 = {}
 		}
 		for(let key in object){
-			object2[key] = clone(object[key])
+			object2[key] = deepClone(object[key])
 		}
 		return object2
 	}
