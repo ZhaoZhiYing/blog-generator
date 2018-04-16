@@ -26,7 +26,8 @@ tags:
 	* Window.innerHeight //浏览器窗口的内部高度(包括滚动条)
 		//IE 中 body 元素的 clientHeight 属性与该属性相同。
 	* Window.innerWidth // 浏览器窗口的内部宽度(包括滚动条)
-		////IE 中 body 元素的 clientWidth 属性与该属性相同。
+		//IE 中 body 元素的 clientWidth 属性与该属性相同。
+		
 	* Window.top //返回最顶层的父窗口。
 	* Window.parent //返回父窗口。
 
@@ -102,10 +103,11 @@ tags:
 
 属性
 
-	* screen.availHeight //可用的屏幕宽度（不包括 Windows 任务栏）
-	* screen.availWidth //可用的屏幕高度（不包括 Windows 任务栏）
+	* screen.availHeight //可用的屏幕高度（不包括 Windows 任务栏）
+	* screen.availWidth //可用的屏幕宽度（不包括 Windows 任务栏）
 	* screen.height //返回屏幕的总高度
 	* screen.width //返回屏幕的总宽度
+	
 	* screen.colorDepth //返回目标设备或缓冲器上的调色板的比特深度
 	* screen.pixelDepth //返回屏幕的颜色分辨率（每象素的位数）
 

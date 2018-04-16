@@ -187,8 +187,7 @@ tags:
 		//offsetheight = padding + height + border + 横向滚动轴高度。
 	* Element.offsetWidth //返回元素的水平宽度(包含 border,padding)。
 	* Element.offsetParent //返回一个指向最近的（closest，指包含层级上的最近）包含该元素的定位元素。
-	* Element.offsetLeft //返回当前元素左上角相对于  HTMLElement.offsetParent 节点的左边界偏移的像素值。	* Element.offsetTop //返回当前元素相对于其 offsetParent 元素的顶部的距离。
-	
+	* Element.offsetLeft //返回当前元素左上角相对于  HTMLElement.offsetParent 节点的左边界偏移的像素值。	* Element.offsetTop //返回当前元素相对于其 offsetParent 元素的顶部的距离。	
 	
 	//节点相关属性
 	* Element.children //包括当前元素节点的所有子元素。
@@ -197,7 +196,7 @@ tags:
 	* Element.lastElementChild //返回当前节点的最后一个 Element 子节点。  
 	* Element.nextElementSibling //返回当前元素节点的下一个兄弟 HTML 元素节点。
 	* Element.previousElementSibling //返回当前元素节点的前一个兄弟 HTML 节点。
-	* Element.offsetParent //返回当前元素节点的最靠近的、并且 CSS 的 position 属性不等于 static 的父元素。
+	
 	
 ##### 方法	
 
