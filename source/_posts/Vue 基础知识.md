@@ -9,9 +9,7 @@ tags:
 
 每个 `Vue` 应用都是通过用 `Vue` 函数创建一个新的 `Vue` 实例开始的。
 
-	var vm = new Vue({
-	  ...
-	})
+	var vm = new Vue({...})
 
 ##### 数据与方法
 
@@ -133,5 +131,30 @@ new Vue({
 		  }
 		}
 	</script>	
+
+##### 侦听属性
+
+`Vue` 提供了一种更通用的方式来观察和响应 `Vue` 实例上的数据变动：侦听属性。
+
+	<div id="demo">{{ fullName }}</div>
+	
+	<script>
+		var vm = new Vue({
+		  el: '#demo',
+		  data: {
+		    firstName: 'Foo',
+		    lastName: 'Bar',
+		    fullName: 'Foo Bar'
+		  },
+		  watch: {
+		    firstName: function (val) {
+		      this.fullName = val + ' ' + this.lastName
+		    },
+		    lastName: function (val) {
+		      this.fullName = this.firstName + ' ' + val
+		    }
+		  }
+		})
+	</script>
 	
 ---	
