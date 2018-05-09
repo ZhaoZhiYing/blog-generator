@@ -13,18 +13,7 @@ tags:
 不同浏览器的默认 `margin` `padding`值不同。解决办法，初始化`CSS`的默认样式：
 
 	*{margin: 0; padding: 0;}
-
-
-##### `transform` 的兼容性写法	
-
-以下是各浏览器 `CSS` 兼容前缀
-
-	* -o-transform: rotate(7deg); // Opera
-	* -ms-transform: rotate(7deg); // IE 9
-	* -moz-transform: rotate(7deg); // Firefox 
-	* -webkit-transform: rotate(7deg); // Safari 和 Chrome 
-	* transform: rotate(7deg); // 统一标识语句
-
+	
 
 ##### `!important`
 
