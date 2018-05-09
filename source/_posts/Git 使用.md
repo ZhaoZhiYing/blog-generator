@@ -5,17 +5,13 @@ categories: Git
 tags:
 ---
 
-此博客仅为记录自己平常操作需要的一些命令
+> 此博客仅为记录自己平常操作需要的一些命令
 
----
 
 `Git` 是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。
 
 参考链接：
-
-[猴子都能懂的Git入门](https://backlog.com/git-tutorial/cn/)
-
-[git - 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
+[猴子都能懂的 Git 入门](https://backlog.com/git-tutorial/cn/)  [Git - 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
 
 ---
 

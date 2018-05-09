@@ -13,11 +13,11 @@ tags:
 ```
 let n = 0;
 let id = setInterval(()=>{ 
-		n += 1
-		console.log(n)
-		if(n>=5){
-			window.clearInterval(id)
-		}
+	n += 1
+	console.log(n)
+	if(n>=5){
+		window.clearInterval(id)
+	}
 },3000)
 
 // 1 2 3 4 5
@@ -33,8 +33,8 @@ let id = setInterval(()=>{
 ```
 let n = 0;
 let id = setTimeout(()=>{ 
-		n += 1
-		console.log(n)
+	n += 1
+	console.log(n)
 },3000)
 
 // 1
@@ -45,11 +45,11 @@ let id = setTimeout(()=>{
 ```
 let n = 0;
 let id = setTimeout(function fn(){ 
-		n += 1
-		console.log(n)
-		if(n<5){
-			setTimeout(fn, 3000) //再次调用 fn
-		}
+	n += 1
+	console.log(n)
+	if(n<5){
+		setTimeout(fn, 3000) //再次调用 fn
+	}
 },3000)
 
 // 1 2 3 4 5

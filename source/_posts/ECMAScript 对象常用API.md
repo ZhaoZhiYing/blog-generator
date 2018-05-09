@@ -102,7 +102,6 @@ tags:
 	* Array.valueOf() //返回数组对象的原始值。
 	* Array.toString() //把数组转换为字符串，并返回结果。
 
-[更多方法](http://www.runoob.com/jsref/jsref-obj-array.html)
 
 ---
 

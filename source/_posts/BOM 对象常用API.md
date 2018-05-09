@@ -23,13 +23,8 @@ tags:
 
 属性
 
-	* Window.innerHeight //浏览器窗口的内部高度(包括滚动条)
-		//IE 中 body 元素的 clientHeight 属性与该属性相同。
-	* Window.innerWidth // 浏览器窗口的内部宽度(包括滚动条)
-		//IE 中 body 元素的 clientWidth 属性与该属性相同。
-		
-	* Window.top //返回最顶层的父窗口。
-	* Window.parent //返回父窗口。
+	* window.top //返回最顶层的父窗口。
+	* window.parent //返回父窗口。
 
 方法
 	
@@ -102,11 +97,6 @@ tags:
 ##### `Screen`对象
 
 属性
-
-	* screen.availHeight //可用的屏幕高度（不包括 Windows 任务栏）
-	* screen.availWidth //可用的屏幕宽度（不包括 Windows 任务栏）
-	* screen.height //返回屏幕的总高度
-	* screen.width //返回屏幕的总宽度
 	
 	* screen.colorDepth //返回目标设备或缓冲器上的调色板的比特深度
 	* screen.pixelDepth //返回屏幕的颜色分辨率（每象素的位数）
@@ -131,7 +121,7 @@ tags:
 
 ##### `Location`对象
 
-	* Location 对象是 window 对象的一部分，可通过 window.Location 属性对其进行访问。
+	* Location 对象是 Window 对象的一部分，可通过 window.Location 属性对其进行访问。
 
 属性
 
@@ -147,9 +137,9 @@ tags:
 
 方法
 
-	* window.location.assign(URL) //载入一个新的文档
-	* window.location.reload() //重新载入当前文档
-	* window.location.replace(newURL) //用新的文档替换当前文档	
+	* location.assign(URL) //载入一个新的文档
+	* location.reload() //重新载入当前文档
+	* location.replace(newURL) //用新的文档替换当前文档	
 ---	
 
 

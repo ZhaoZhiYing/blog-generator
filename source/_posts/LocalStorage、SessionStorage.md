@@ -13,26 +13,22 @@ tags:
 ##### 常用`API`（`LocalStorage`和`SessionStorage`）
 
 ```
-localStorage.setItem(key, value) 保存数据
+* localStorage.setItem(key, value) //保存数据
+* localStorage.getItem(key) //读取数据
+* localStorage.removeItem(key) //删除单个数据
+* localStorage.clear() //删除所有数据
+* localStorage.key(index) //得到某个索引的 key
 
-localStorage.getItem(key) 读取数据
-
-localStorage.removeItem(key) 删除单个数据
-
-localStorage.clear() 删除所有数据
-
-localStorage.key(index) 得到某个索引的 key
-
-//键/值对通常以字符串存储，可以按自己的需要转换该格式。
+//键值对通常以字符串存储，可以按自己的需要转换该格式。
 ```
 
 ##### `LocalStorage`特点
 
-1. `LocalStorage` 跟 `HTTP` 无关，`HTTP` 不会带上 `LocalStorage` 的值。
-2. 只有相同域名的页面才能互相读取 `LocalStorage`（没有同源那么严格）。
-3. 每个域名 `LocalStorage` 最大存储量为 5MB 左右（每个浏览器不一样）。
-4. 常用场景：记录有没有提示过用户（不敏感的信息，不能记录密码）。
-5. `LocalStorage`永久有效，除非用户清理缓存。
+	1. LocalStorage 跟 HTTP 无关，HTTP 不会带上 LocalStorage 的值。
+	2. 只有相同域名的页面才能互相读取 LocalStorage（没有同源那么严格）。
+	3. 每个域名 LocalStorage 最大存储量为 5MB 左右（每个浏览器不一样）。
+	4. 常用场景：记录有没有提示过用户（不敏感的信息，不能记录密码）。
+	5. LocalStorage 永久有效，除非用户清理缓存。
 
 举例1
 

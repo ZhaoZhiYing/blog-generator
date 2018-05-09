@@ -133,11 +133,11 @@ JSON.parse('null');            // null
 	space //可选，文本添加缩进、空格和换行符。
  
 ```
-JSON.stringify({});                		// '{}'
-JSON.stringify(true);                   // 'true'
-JSON.stringify("foo");                  // '"foo"'
-JSON.stringify([1,"false",false]);      // '[1,"false",false]'
-JSON.stringify({ x: 5 });               // '{"x":5}'
+JSON.stringify({}) //'{}'
+JSON.stringify(true) //'true'
+JSON.stringify("foo") //'"foo"'
+JSON.stringify([1,"false",false]) //'[1,"false",false]'
+JSON.stringify({ x: 5 }) //'{"x":5}'
 ```
  
 ##### `toJSON` 方法
@@ -150,7 +150,7 @@ JSON.stringify({ x: 5 });               // '{"x":5}'
 	    return 'bar';
 	  }
 	};
-	JSON.stringify(obj);      // '"bar"'
-	JSON.stringify({x: obj}); // '{"x":"bar"}'
+	JSON.stringify(obj) //'"bar"'
+	JSON.stringify({x: obj}) //'{"x":"bar"}'
 	
 ---	
